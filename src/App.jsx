@@ -92,10 +92,10 @@ export default function App() {
                     <div className="inline-block px-4 py-1.5 rounded-full border border-red-500/30 bg-red-500/10 text-red-400 text-[14px] font-medium tracking-widest mb-8">
                         Essentials of management
                     </div>
-                    <h1 className="text-[22px] md:text-[22px] font-medium text-white mb-6 tracking-tight">
-                        Toyota <span className="text-red-600">motor</span> corp.
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white mb-6 tracking-tight">
+                        Toyota <span className="text-red-600 font-medium">motor</span> corp.
                     </h1>
-                    <p className="text-[18px] md:text-[18px] font-normal text-slate-400 mb-12 max-w-3xl">
+                    <p className="text-xl md:text-2xl font-light text-slate-400 mb-12 max-w-3xl">
                         Strategic & organisational analysis of a global mobility empire in transition.
                     </p>
 
