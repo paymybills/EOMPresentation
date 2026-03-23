@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect, forwardRef } from 'react';
+import React, { useRef, useLayoutEffect, forwardRef, Suspense } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, Environment, ContactShadows, Float } from '@react-three/drei';
 import * as THREE from 'three';
@@ -53,7 +53,9 @@ export default function ThreeCanvas({ modelRef }) {
         />
         
         <Float speed={1.5} rotationIntensity={0.1} floatIntensity={0.5}>
-           <Model url="/toyota_gr_supra.glb" ref={modelRef} />
+           <Suspense fallback={null}>
+               <Model url="/toyota_gr_supra.glb" ref={modelRef} />
+           </Suspense>
         </Float>
         
         <ContactShadows 
