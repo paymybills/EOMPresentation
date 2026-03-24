@@ -4,33 +4,27 @@ import {
     TrendingUp, Car, AlertTriangle, BarChart3, BookOpen,
     Award, Scale, Waves, Zap, Shield, GitMerge, FileText, CheckCircle2
 } from 'lucide-react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Lenis from 'lenis';
-import 'lenis/dist/lenis.css';
-
-gsap.registerPlugin(ScrollTrigger);
 
 // --- COMPONENTS ---
 
 const SectionHeading = ({ subtitle, title }) => (
     <div className="mb-16 md:mb-24">
-        <p className="text-red-500 font-semibold tracking-[0.18em] text-[11px] uppercase mb-5 opacity-80">{subtitle}</p>
-        <h2 className="text-[36px] md:text-[48px] font-semibold text-white leading-[1.08] tracking-tight">{title}</h2>
-        <div className="h-[2px] w-14 bg-red-600 mt-6 rounded-full opacity-70"></div>
+        <h3 className="text-red-600 font-medium tracking-widest text-[16px] mb-4">{subtitle}</h3>
+        <h2 className="text-[22px] md:text-[22px] font-medium text-slate-100 leading-tight">{title}</h2>
+        <div className="h-1 w-24 bg-red-600 mt-8 rounded-full"></div>
     </div>
 );
 
 const Card = ({ icon: Icon, title, text, highlight }) => (
-    <div className="card-hover bg-slate-900/80 border border-slate-800 p-6 rounded-2xl hover:border-red-500/20">
+    <div className="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl hover:border-red-500/30 transition-colors">
         <div className="flex items-center gap-4 mb-4">
-            <div className="bg-red-500/10 p-3 rounded-xl text-red-500">
-                <Icon size={22} />
+            <div className="bg-red-500/10 p-3 rounded-lg text-red-500">
+                <Icon size={24} />
             </div>
-            <h4 className="text-[15px] font-semibold text-white tracking-tight">{title}</h4>
+            <h4 className="text-[16px] font-medium text-white">{title}</h4>
         </div>
         <p className="text-slate-400 text-[14px] leading-relaxed">{text}</p>
-        {highlight && <div className="mt-4 text-[13px] font-semibold text-red-400 tracking-wider">{highlight}</div>}
+        {highlight && <div className="mt-4 text-[14px] font-medium text-red-400 tracking-wider">{highlight}</div>}
     </div>
 );
 
@@ -49,22 +43,8 @@ export default function App() {
         }
     };
 
-    // Initialize Lenis, Intersection Observer and GSAP Scroll animations
+    // Initialize Intersection Observer for scroll animations
     useEffect(() => {
-        // Initialize Lenis
-        const lenis = new Lenis({
-          duration: 1.2,
-          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-          direction: 'vertical',
-          smooth: true,
-        });
-
-        lenis.on('scroll', ScrollTrigger.update);
-        gsap.ticker.add((time) => lenis.raf(time * 1000));
-        gsap.ticker.lagSmoothing(0, 0);
-
-
-
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -77,78 +57,47 @@ export default function App() {
             { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
         );
 
-        const animateSections = document.querySelectorAll('.animate-on-scroll');
-        animateSections.forEach((section) => observer.observe(section));
+        const sections = document.querySelectorAll('.animate-on-scroll');
+        sections.forEach((section) => observer.observe(section));
 
         return () => {
-            lenis.destroy();
-            animateSections.forEach((section) => observer.unobserve(section));
+            sections.forEach((section) => observer.unobserve(section));
             observer.disconnect();
         };
     }, []);
 
     return (
-        <div ref={containerRef} className="bg-[#1d1d1f] text-slate-300 min-h-screen overflow-hidden scroll-smooth relative">
-
+        <div ref={containerRef} className="bg-slate-950 text-slate-300 font-sans min-h-screen selection:bg-red-600 selection:text-white overflow-hidden scroll-smooth">
+            
             {/* Top Navigation Bar */}
-            <nav className="fixed top-0 w-full z-50 bg-[#1d1d1f]/80 backdrop-blur-2xl border-b border-white/[0.06] px-8 py-[14px] flex justify-between items-center">
-                 <div className="text-[15px] font-semibold text-white flex items-center gap-2 tracking-tight">
-                    <Car className="text-red-600" size={18} />
+            <nav className="static top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800 px-6 py-4 flex justify-between items-center">
+                 <div className="text-[16px] font-medium text-white flex items-center gap-2">
+                    <Car className="text-red-600" size={20} />
                     Toyota Strategy
                  </div>
-                 <div className="flex gap-7 text-[13px] font-medium text-[#a1a1a6]">
-                     <button onClick={() => handleNavClick('intro')} className={`transition-colors duration-200 ${activeSection === 'intro' ? 'text-white' : 'hover:text-white'}`}>Intro</button>
-                     <button onClick={() => handleNavClick('planning')} className={`transition-colors duration-200 ${activeSection === 'planning' ? 'text-white' : 'hover:text-white'}`}>Planning</button>
-                     <button onClick={() => handleNavClick('organizing')} className={`transition-colors duration-200 ${activeSection === 'organizing' ? 'text-white' : 'hover:text-white'}`}>Organizing</button>
-                     <button onClick={() => handleNavClick('staffing')} className={`transition-colors duration-200 ${activeSection === 'staffing' ? 'text-white' : 'hover:text-white'}`}>Staffing</button>
-                     <button onClick={() => handleNavClick('leading')} className={`transition-colors duration-200 ${activeSection === 'leading' ? 'text-white' : 'hover:text-white'}`}>Leading</button>
+                 <div className="flex gap-6 text-[14px] font-medium text-slate-400">
+                     <button onClick={() => handleNavClick('intro')} className={`hover:text-white transition-colors ${activeSection === 'intro' ? 'text-white border-b-2 border-red-600' : ''}`}>Intro</button>
+                     <button onClick={() => handleNavClick('planning')} className={`hover:text-white transition-colors ${activeSection === 'planning' ? 'text-white border-b-2 border-red-600' : ''}`}>Planning</button>
+                     <button onClick={() => handleNavClick('organizing')} className={`hover:text-white transition-colors ${activeSection === 'organizing' ? 'text-white border-b-2 border-red-600' : ''}`}>Organizing</button>
+                     <button onClick={() => handleNavClick('staffing')} className={`hover:text-white transition-colors ${activeSection === 'staffing' ? 'text-white border-b-2 border-red-600' : ''}`}>Staffing</button>
+                     <button onClick={() => handleNavClick('leading')} className={`hover:text-white transition-colors ${activeSection === 'leading' ? 'text-white border-b-2 border-red-600' : ''}`}>Leading</button>
                  </div>
             </nav>
 
             {/* --- HERO SECTION --- */}
             <section className="hero-section relative min-h-screen flex flex-col justify-center items-center text-center px-4 py-20 overflow-hidden">
+                <div className="hero-bg absolute inset-0 z-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-900/40 via-slate-950 to-slate-950"></div>
 
-                {/* Animated grid background */}
-                <div className="absolute inset-0 z-0" style={{
-                    backgroundImage: `linear-gradient(rgba(220,38,38,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(220,38,38,0.06) 1px, transparent 1px)`,
-                    backgroundSize: '60px 60px'
-                }} />
-                {/* Radial fade over grid */}
-                <div className="absolute inset-0 z-0" style={{
-                    background: 'radial-gradient(ellipse 80% 60% at 50% 50%, transparent 0%, #020617 70%)'
-                }} />
-                {/* Top glow */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full z-0" style={{
-                    background: 'radial-gradient(ellipse at center, rgba(220,38,38,0.18) 0%, transparent 70%)',
-                    filter: 'blur(40px)'
-                }} />
-
-                <div className="relative z-10 max-w-6xl mx-auto flex flex-col items-center w-full">
+                <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center">
                     <div className="inline-block px-4 py-1.5 rounded-full border border-red-500/30 bg-red-500/10 text-red-400 text-[14px] font-medium tracking-widest mb-8">
                         Essentials of management
                     </div>
-                    <h1 className="text-5xl md:text-7xl lg:text-[96px] font-light text-white mb-6 tracking-tight leading-none">
+                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white mb-6 tracking-tight">
                         Toyota <span className="text-red-600 font-medium">motor</span> corp.
                     </h1>
-                    <p className="text-xl md:text-2xl font-light text-slate-400 mb-16 max-w-3xl">
-                        Strategic &amp; organisational analysis of a global mobility empire in transition.
+                    <p className="text-xl md:text-2xl font-light text-slate-400 mb-12 max-w-3xl">
+                        Strategic & organisational analysis of a global mobility empire in transition.
                     </p>
-
-                    {/* Stat cards row */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full max-w-4xl mb-16">
-                        {[
-                            { label: 'Global rank', value: '#1', sub: 'by units sold' },
-                            { label: 'FY25 revenue', value: '¥48T', sub: 'record high' },
-                            { label: 'H1 2025 units', value: '5.5M', sub: 'shipped globally' },
-                            { label: 'Employees', value: '380K', sub: 'worldwide' },
-                        ].map((s) => (
-                            <div key={s.label} className="stat-card bg-white/[0.05] border border-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">
-                                <div className="text-[32px] font-semibold text-white mb-1 tracking-tight">{s.value}</div>
-                                <div className="text-[10px] font-semibold text-red-400 tracking-[0.18em] uppercase mb-1">{s.label}</div>
-                                <div className="text-[12px] text-[#636366]">{s.sub}</div>
-                            </div>
-                        ))}
-                    </div>
 
                     <div className="bg-slate-900/50 border border-slate-800 p-6 rounded-2xl w-full max-w-4xl backdrop-blur-sm">
                         <h3 className="text-red-500 font-medium tracking-widest text-[14px] mb-6 border-b border-slate-800 pb-4">MIT Manipal | Math and computing 2027</h3>
@@ -229,34 +178,34 @@ export default function App() {
 
                     {/* 1. SWOT MATRIX */}
                     <div className="mb-20">
-                        <h3 className="text-[18px] font-semibold text-white mb-8 flex items-center gap-3 tracking-tight"><Target className="text-red-500" /> 1. The SWOT matrix</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 stagger">
-                            <div className="card-hover bg-slate-900 border border-emerald-500/20 rounded-2xl p-6 relative overflow-hidden">
-                                <h4 className="text-[15px] font-semibold text-emerald-400 mb-4 tracking-tight">Strengths</h4>
+                        <h3 className="text-[18px] font-medium text-white mb-8 flex items-center gap-3"><Target className="text-red-500" /> 1. The SWOT matrix</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="bg-slate-900 border border-emerald-500/20 rounded-2xl p-6 relative overflow-hidden">
+                                <h4 className="text-[16px] font-medium text-emerald-400 mb-4">Strengths</h4>
                                 <ul className="space-y-2 text-slate-300 text-[14px]">
                                     <li className="flex gap-2"><span className="text-emerald-500">●</span> <strong>Operational scale:</strong> Best-selling automaker globally with over 5.5M units shipped in H1 2025. Supported by a AAA+ brand valuation of $64.7B.</li>
                                     <li className="flex gap-2"><span className="text-emerald-500">●</span> <strong>Manufacturing supremacy:</strong> The highly resilient Toyota production system (TPS) provides unmatched defect-reduction and lean operating leverage.</li>
                                     <li className="flex gap-2"><span className="text-emerald-500">●</span> <strong>Hedging risk:</strong> A well-diversified multi-pathway product portfolio covering internal combustion (ICE), hybrids (HEV), plug-ins (PHEV), hydrogen (FCEV), and battery electrics (BEV).</li>
                                 </ul>
                             </div>
-                            <div className="card-hover bg-slate-900 border border-orange-500/20 rounded-2xl p-6 relative overflow-hidden">
-                                <h4 className="text-[15px] font-semibold text-orange-400 mb-4 tracking-tight">Weaknesses</h4>
+                            <div className="bg-slate-900 border border-orange-500/20 rounded-2xl p-6 relative overflow-hidden">
+                                <h4 className="text-[16px] font-medium text-orange-400 mb-4">Weaknesses</h4>
                                 <ul className="space-y-2 text-slate-300 text-[14px]">
                                     <li className="flex gap-2"><span className="text-orange-500">●</span> <strong>Market concentration:</strong> Historical over-reliance on the Japanese domestic market and North American truck segments for outlier profits.</li>
                                     <li className="flex gap-2"><span className="text-orange-500">●</span> <strong>Organizational drag:</strong> Bureaucratic rigidity and a consensual culture occasionally slowing cross-divisional technological decisions compared to agile startups.</li>
                                     <li className="flex gap-2"><span className="text-orange-500">●</span> <strong>Financial compression:</strong> Operating margin declined severely to 10.0% (FY2025) as capital expenditure toward BEV transition eroded immediate cash flows.</li>
                                 </ul>
                             </div>
-                            <div className="card-hover bg-slate-900 border border-blue-500/20 rounded-2xl p-6 relative overflow-hidden">
-                                <h4 className="text-[15px] font-semibold text-blue-400 mb-4 tracking-tight">Opportunities</h4>
+                            <div className="bg-slate-900 border border-blue-500/20 rounded-2xl p-6 relative overflow-hidden">
+                                <h4 className="text-[16px] font-medium text-blue-400 mb-4">Opportunities</h4>
                                 <ul className="space-y-2 text-slate-300 text-[14px]">
                                     <li className="flex gap-2"><span className="text-blue-500">●</span> <strong>Macroeconomic tailwinds:</strong> Sustained weak Japanese Yen dramatically boosting the profitability margin of vehicles built domestically and exported globally.</li>
                                     <li className="flex gap-2"><span className="text-blue-500">●</span> <strong>Consumer hesitation:</strong> Surging global demand for hybrid vehicles as range anxiety prevents consumers from fully committing to BEVs.</li>
                                     <li className="flex gap-2"><span className="text-blue-500">●</span> <strong>Policy advantages:</strong> Lucrative government subsidies and regulatory tax breaks explicitly designed for eco-mobility and domestic battery localization.</li>
                                 </ul>
                             </div>
-                            <div className="card-hover bg-slate-900 border border-red-500/20 rounded-2xl p-6 relative overflow-hidden">
-                                <h4 className="text-[15px] font-semibold text-red-500 mb-4 tracking-tight">Threats</h4>
+                            <div className="bg-slate-900 border border-red-500/20 rounded-2xl p-6 relative overflow-hidden">
+                                <h4 className="text-[16px] font-medium text-red-500 mb-4">Threats</h4>
                                 <ul className="space-y-2 text-slate-300 text-[14px]">
                                     <li className="flex gap-2"><span className="text-red-500">●</span> <strong>Geopolitical instability:</strong> Escalating U.S. tariffs and protectionist trade agreements directly disrupting high-profit imported export models.</li>
                                     <li className="flex gap-2"><span className="text-red-500">●</span> <strong>Hyper-competition:</strong> Aggressive low-cost Chinese EV OEMs (BYD, SAIC, NIO) utilizing depressed domestic labor costs to severely undercut European and Asian markets.</li>
@@ -340,29 +289,29 @@ export default function App() {
                                     </div>
                                     
                                     {/* Star */}
-                                    <div className="card-hover bg-slate-800 border border-slate-700 p-6 rounded-tl-2xl min-h-[160px]">
-                                        <h4 className="text-[15px] font-semibold text-blue-400 mb-2 tracking-tight">Stars</h4>
+                                    <div className="bg-slate-800 border border-slate-700 p-6 rounded-tl-2xl min-h-[160px]">
+                                        <h4 className="text-[16px] font-medium text-blue-400 mb-2">Stars</h4>
                                         <p className="text-[14px] text-slate-300 font-medium mb-1">HEV (Hybrids) & RAV4/Camry</p>
                                         <p className="text-[14px] text-slate-400">High share, high growth. These models are absolute juggernauts. They represent the current primary revenue drivers, brilliantly capturing the transitional consumer demographic that wants electrification without range anxiety.</p>
                                     </div>
                                     
                                     {/* Question Mark */}
-                                    <div className="card-hover bg-slate-800 border border-slate-700 p-6 rounded-tr-2xl min-h-[160px]">
-                                        <h4 className="text-[15px] font-semibold text-purple-400 mb-2 tracking-tight">Question marks</h4>
+                                    <div className="bg-slate-800 border border-slate-700 p-6 rounded-tr-2xl min-h-[160px]">
+                                        <h4 className="text-[16px] font-medium text-purple-400 mb-2">Question marks</h4>
                                         <p className="text-[14px] text-slate-300 font-medium mb-1">BEV (bZ4X) & Hydrogen (Mirai)</p>
                                         <p className="text-[14px] text-slate-400">Low share, high growth. These products require disproportionate, massive R&D capital injections to secure a long-term market footing against established EV rivals, yet return little to no immediate profit.</p>
                                     </div>
 
                                     {/* Cash Cow */}
-                                    <div className="card-hover bg-slate-800 border border-slate-700 p-6 rounded-bl-2xl min-h-[160px]">
-                                        <h4 className="text-[15px] font-semibold text-emerald-400 mb-2 tracking-tight">Cash cows</h4>
+                                    <div className="bg-slate-800 border border-slate-700 p-6 rounded-bl-2xl min-h-[160px]">
+                                        <h4 className="text-[16px] font-medium text-emerald-400 mb-2">Cash cows</h4>
                                         <p className="text-[14px] text-slate-300 font-medium mb-1">ICE Trucks & SUVs (Tacoma/Hilux)</p>
                                         <p className="text-[14px] text-slate-400">High share, low growth. These are the highly profitable, depreciated-tooling legacy stalwarts. They generate immense free cash flow, acting as the primary fiscal engine funding the futuristic BEV and Hydrogen bets.</p>
                                     </div>
 
                                     {/* Dog */}
-                                    <div className="card-hover bg-slate-800 border border-slate-700 p-6 rounded-br-2xl min-h-[160px]">
-                                        <h4 className="text-[15px] font-semibold text-slate-300 mb-2 tracking-tight">Dogs</h4>
+                                    <div className="bg-slate-800 border border-slate-700 p-6 rounded-br-2xl min-h-[160px]">
+                                        <h4 className="text-[16px] font-medium text-slate-300 mb-2">Dogs</h4>
                                         <p className="text-[14px] text-slate-300 font-medium mb-1">Compact & Midsize ICE Sedans</p>
                                         <p className="text-[14px] text-slate-400">Low share, low growth limit. With global consumer preferences decisively shifting towards larger SUVs and CUVs, Toyota is actively consolidating and divesting from non-hybrid traditional sedan segments to prevent capital drain.</p>
                                     </div>
@@ -374,38 +323,38 @@ export default function App() {
                     {/* 5. PORTER'S FIVE FORCES */}
                     <div>
                         <h3 className="text-[18px] font-medium text-white mb-8 flex items-center gap-3"><Shield className="text-red-500" /> 5. Porter's five forces</h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 stagger">
-                            <div className="card-hover bg-slate-900 border-t-[3px] border-red-600 p-5 rounded-xl flex flex-col justify-between">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <div className="bg-slate-900 border-t-[3px] border-red-600 p-5 rounded-lg flex flex-col justify-between">
                                 <div>
-                                    <h5 className="font-semibold text-white mb-1 tracking-tight">Rivalry</h5>
+                                    <h5 className="font-medium text-white mb-1">Rivalry</h5>
                                     <span className="text-[14px] font-medium text-red-500 tracking-wider">Very high</span>
                                     <p className="text-[14px] text-slate-400 mt-2 font-normal">Toyota is engaged in direct, brutal confrontation on multiple fronts: legacy giants like VW and Hyundai pushing heavy volume, and heavily subsidized, aggressive Chinese EV OEMs (BYD, SAIC) triggering severe global margin compression and price wars.</p>
                                 </div>
                             </div>
-                            <div className="card-hover bg-slate-900 border-t-[3px] border-orange-500 p-5 rounded-xl flex flex-col justify-between">
+                            <div className="bg-slate-900 border-t-[3px] border-orange-500 p-5 rounded-lg flex flex-col justify-between">
                                 <div>
-                                    <h5 className="font-semibold text-white mb-1 tracking-tight">Buyers</h5>
+                                    <h5 className="font-medium text-white mb-1">Buyers</h5>
                                     <span className="text-[14px] font-medium text-orange-400 tracking-wider">Mod-high</span>
                                     <p className="text-[14px] text-slate-400 mt-2 font-normal">Armed with near-perfect digital pricing transparency, modern consumers expect high-tech electrification as a standard baseline, not a premium feature. The loss or reduction of federal EV tax credits further amplifies this intense demographic price sensitivity.</p>
                                 </div>
                             </div>
-                            <div className="card-hover bg-slate-900 border-t-[3px] border-orange-500 p-5 rounded-xl flex flex-col justify-between">
+                            <div className="bg-slate-900 border-t-[3px] border-orange-500 p-5 rounded-lg flex flex-col justify-between">
                                 <div>
-                                    <h5 className="font-semibold text-white mb-1 tracking-tight">Suppliers</h5>
+                                    <h5 className="font-medium text-white mb-1">Suppliers</h5>
                                     <span className="text-[14px] font-medium text-orange-400 tracking-wider">Mod-high</span>
                                     <p className="text-[14px] text-slate-400 mt-2 font-normal">Automakers face extreme reliance on heavily concentrated global supply chains for rare-earth battery minerals and advanced semiconductor chips. Toyota aggressively counters this extortion leverage via massive vertical integration, notably its in-house $13.9B NC battery campus.</p>
                                 </div>
                             </div>
-                            <div className="card-hover bg-slate-900 border-t-[3px] border-yellow-500 p-5 rounded-xl flex flex-col justify-between">
+                            <div className="bg-slate-900 border-t-[3px] border-yellow-500 p-5 rounded-lg flex flex-col justify-between">
                                 <div>
-                                    <h5 className="font-semibold text-white mb-1 tracking-tight">New entrants</h5>
+                                    <h5 className="font-medium text-white mb-1">New entrants</h5>
                                     <span className="text-[14px] font-medium text-yellow-500 tracking-wider">Moderate</span>
                                     <p className="text-[14px] text-slate-400 mt-2 font-normal">Historically, manufacturing required massive capital barriers. Now, well-funded software-first technology firms (like Tesla originally, or emerging tech-auto joint ventures) are bypassing legacy engine manufacturing entirely, supported directly by foreign government EV subsidies.</p>
                                 </div>
                             </div>
-                            <div className="card-hover bg-slate-900 border-t-[3px] border-yellow-500 p-5 rounded-xl lg:col-span-2 flex flex-col justify-between">
+                            <div className="bg-slate-900 border-t-[3px] border-yellow-500 p-5 rounded-lg lg:col-span-2 flex flex-col justify-between">
                                 <div>
-                                    <h5 className="font-semibold text-white mb-1 tracking-tight">Substitutes</h5>
+                                    <h5 className="font-medium text-white mb-1">Substitutes</h5>
                                     <span className="text-[14px] font-medium text-yellow-500 tracking-wider">Moderate</span>
                                     <p className="text-[14px] text-slate-400 mt-2 font-normal">The rise of ubiquitous urban mobility platforms (Uber, DiDi, Lyft), advanced high-speed rail, and micro-mobility solutions fundamentally threaten the private ownership model. Toyota's strategic pivot into a broad "mobility provider" deliberately hedges against this post-ownership future.</p>
                                 </div>
@@ -444,8 +393,8 @@ export default function App() {
 
                     <div className="flex flex-col gap-8">
                         {/* Governance Board */}
-                        <div className="card-hover bg-slate-900 p-8 rounded-2xl border border-slate-800">
-                            <h4 className="text-[17px] font-semibold text-white mb-4 flex items-center gap-3 tracking-tight"><Scale className="text-red-500" /> Board governance evolution</h4>
+                        <div className="bg-slate-900 p-8 rounded-2xl border border-slate-800">
+                            <h4 className="text-[18px] font-medium text-white mb-4 flex items-center gap-3"><Scale className="text-red-500" /> Board governance evolution</h4>
                             <p className="text-slate-400 text-[14px] mb-4 font-normal">
                                 To ensure extreme operational agility and transparency, Toyota transitioned in June 2025 to a modern <strong>"company with an audit and supervisory committee."</strong>
                             </p>
@@ -669,8 +618,8 @@ export default function App() {
                     </div>
 
                     <div className="col-span-1 lg:col-span-6 flex flex-col gap-6">
-                        <div className="card-hover bg-slate-900 border border-slate-800 rounded-3xl p-8">
-                            <h3 className="text-[16px] font-semibold text-white mb-6 flex items-center gap-3 tracking-tight">
+                        <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8">
+                            <h3 className="text-[16px] font-medium text-white mb-6 flex items-center gap-3">
                                 <ShieldCheck className="text-red-500" /> Executive compliance architecture
                             </h3>
                             <p className="text-[14px] text-slate-400 mb-6 font-normal">
@@ -691,8 +640,8 @@ export default function App() {
                             </div>
                         </div>
 
-                        <div className="card-hover bg-slate-900 border border-slate-800 rounded-3xl p-8">
-                            <h3 className="text-[16px] font-semibold text-white mb-6 flex items-center gap-3 tracking-tight">
+                        <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8">
+                            <h3 className="text-[16px] font-medium text-white mb-6 flex items-center gap-3">
                                 <Globe className="text-blue-500" /> Environmental & vendor supply control
                             </h3>
                             <ul className="space-y-4 text-[14px]">
