@@ -155,14 +155,17 @@ export default function App() {
                     <SectionHeading subtitle="Chapter 1" title="The metamorphosis" />
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                         <div>
-                            <p className="text-[18px] leading-relaxed mb-6 font-normal">
-                                Originating from the Toyoda Automatic Loom Works in the early 20th century under Sakichi Toyoda, Toyota has constantly transcended its mechanical roots. After World War II, under the guidance of Kiichiro Toyoda and legendary engineer Taiichi Ohno, the company pioneered the Toyota Production System (TPS) - a socio-technical framework that eradicated waste (muda) and introduced "Just-In-Time" manufacturing to the world. TPS fundamentally altered global industrial manufacturing, cementing Toyota's legacy not just as a car builder, but as an efficiency pioneer.
+                            <p className="text-[16px] leading-relaxed mb-5 font-normal">
+                                Originating from the Toyoda Automatic Loom Works in the early 20th century under Sakichi Toyoda, Toyota has constantly transcended its mechanical roots. After World War II, under the guidance of Kiichiro Toyoda and legendary engineer Taiichi Ohno, the company pioneered the Toyota Production System (TPS) — a socio-technical framework that eradicated waste (muda) and introduced "Just-In-Time" manufacturing to the world. TPS fundamentally altered global industrial manufacturing, cementing Toyota's legacy not just as a car builder, but as an efficiency pioneer.
                             </p>
-                            <p className="text-[18px] leading-relaxed mb-6 font-normal">
+                            <p className="text-[16px] leading-relaxed mb-5 font-normal">
+                                This ethos is anchored by the corporate vision of <em>"creating mobility for all"</em>. It is a commitment ensuring unrestricted, safe, and equitable access to transportation across diverse global demographics — from advanced robotic mobility aids for the elderly in aging societies like Japan, to rugged, affordable hybrids for emerging markets in Africa and Southeast Asia.
+                            </p>
+                            <p className="text-[16px] leading-relaxed mb-5 font-normal">
                                 Today, facing a generational disruption driven by electrification, autonomy, and artificial intelligence, Toyota is executing another comprehensive strategic pivot. They are shedding the identity of a traditional automaker to become a holistic <strong>mobility company</strong> dedicated to the seamless global movement of people, goods, information, and energy. This transition places software-defined vehicles (SDVs) and interconnected smart-city infrastructures, such as the Woven City project, at the epicenter of their future growth strategy.
                             </p>
-                            <blockquote className="border-l-4 border-red-600 pl-6 py-4 my-8 bg-zinc-950 text-[18px] text-zinc-200">
-                                <span className="font-medium block text-red-500 text-[14px] tracking-widest mb-2">Core mission</span>
+                            <blockquote className="border-l-4 border-red-600 pl-6 py-4 my-6 bg-zinc-950 text-[16px] text-zinc-200">
+                                <span className="font-medium block text-red-500 text-[11px] tracking-widest mb-2">Core mission</span>
                                 "Producing happiness for all."
                             </blockquote>
                         </div>
@@ -188,6 +191,40 @@ export default function App() {
                 </div>
             </Slide>
 
+            {/* --- CHAPTER 1B: TOYODA PRECEPTS --- */}
+            <Slide>
+                <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
+                    <h3 className="text-[18px] font-semibold text-white mb-8 flex items-center gap-3 tracking-tight"><BookOpen className="text-red-500" /> The five Toyoda precepts</h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 stagger">
+                        <div className="card-hover bg-zinc-950 border border-zinc-800 p-5 rounded-none">
+                            <span className="text-red-500 font-bold text-[13px]">1.</span>
+                            <h5 className="text-[14px] font-medium text-white mt-1 mb-2">Faithful to duties</h5>
+                            <p className="text-[12px] text-zinc-400">Contribute to the overall good. A principle demanding corporate citizenship above isolated profit-seeking.</p>
+                        </div>
+                        <div className="card-hover bg-zinc-950 border border-zinc-800 p-5 rounded-none">
+                            <span className="text-red-500 font-bold text-[13px]">2.</span>
+                            <h5 className="text-[14px] font-medium text-white mt-1 mb-2">Studiousness & creativity</h5>
+                            <p className="text-[12px] text-zinc-400">Stay ahead of the times. The foundational basis for continuous internal innovation and R&D investment.</p>
+                        </div>
+                        <div className="card-hover bg-zinc-950 border border-zinc-800 p-5 rounded-none">
+                            <span className="text-red-500 font-bold text-[13px]">3.</span>
+                            <h5 className="text-[14px] font-medium text-white mt-1 mb-2">Practicality over frivolity</h5>
+                            <p className="text-[12px] text-zinc-400">A core tenet that directly birthed lean manufacturing and value-driven engineering across the TPS.</p>
+                        </div>
+                        <div className="card-hover bg-zinc-950 border border-zinc-800 p-5 rounded-none">
+                            <span className="text-red-500 font-bold text-[13px]">4.</span>
+                            <h5 className="text-[14px] font-medium text-white mt-1 mb-2">Warm workplace atmosphere</h5>
+                            <p className="text-[12px] text-zinc-400">Ensuring psychological safety and mutual respect on the factory floor (genba) for all workers.</p>
+                        </div>
+                        <div className="card-hover bg-zinc-950 border border-zinc-800 p-5 rounded-none lg:col-span-2">
+                            <span className="text-red-500 font-bold text-[13px]">5.</span>
+                            <h5 className="text-[14px] font-medium text-white mt-1 mb-2">Respect for spiritual matters & gratitude</h5>
+                            <p className="text-[12px] text-zinc-400">Fostering humility in leadership and profound respect for the communities Toyota operates in globally.</p>
+                        </div>
+                    </div>
+                </div>
+            </Slide>
+
             {/* --- CHAPTER 2: PLANNING (SWOT, TOWS, Blue Ocean, Porter) --- */}
             <Slide border="border-t border-zinc-800">
                 <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
@@ -206,33 +243,33 @@ export default function App() {
                         <div className="card-hover bg-zinc-950 border border-emerald-500/20 rounded-none p-6 relative overflow-hidden">
                             <h4 className="text-[15px] font-semibold text-emerald-400 mb-4 tracking-tight">Strengths</h4>
                             <ul className="space-y-2 text-zinc-300 text-[14px]">
-                                <li className="flex gap-2"><span className="text-emerald-500 text-[8px] mt-1.5">●</span> <strong>Operational scale:</strong> Best-selling automaker globally with over 5.5M units shipped in H1 2025.</li>
-                                <li className="flex gap-2"><span className="text-emerald-500 text-[8px] mt-1.5">●</span> <strong>Manufacturing supremacy:</strong> The highly resilient Toyota production system (TPS) provides unmatched lean operating leverage.</li>
-                                <li className="flex gap-2"><span className="text-emerald-500 text-[8px] mt-1.5">●</span> <strong>Hedging risk:</strong> A well-diversified multi-pathway product portfolio (HEV, PHEV, BEV, FCEV).</li>
+                                <li className="flex gap-2"><span className="text-emerald-500 text-[8px] mt-1.5">●</span> <strong>Operational scale:</strong> Best-selling automaker globally with over 5.5M units shipped in H1 2025, supported by a AAA+ brand valuation of $64.7B.</li>
+                                <li className="flex gap-2"><span className="text-emerald-500 text-[8px] mt-1.5">●</span> <strong>Manufacturing supremacy:</strong> The highly resilient Toyota Production System (TPS) provides unmatched defect-reduction and lean operating leverage.</li>
+                                <li className="flex gap-2"><span className="text-emerald-500 text-[8px] mt-1.5">●</span> <strong>Hedging risk:</strong> A well-diversified multi-pathway product portfolio covering internal combustion (ICE), hybrids (HEV), plug-ins (PHEV), hydrogen (FCEV), and battery electrics (BEV).</li>
                             </ul>
                         </div>
                         <div className="card-hover bg-zinc-950 border border-orange-500/20 rounded-none p-6 relative overflow-hidden">
                             <h4 className="text-[15px] font-semibold text-orange-400 mb-4 tracking-tight">Weaknesses</h4>
                             <ul className="space-y-2 text-zinc-300 text-[14px]">
                                 <li className="flex gap-2"><span className="text-orange-500 text-[8px] mt-1.5">●</span> <strong>Market concentration:</strong> Historical over-reliance on North American truck segments for outlier profits.</li>
-                                <li className="flex gap-2"><span className="text-orange-500 text-[8px] mt-1.5">●</span> <strong>Organizational drag:</strong> Bureaucratic rigidity occasionally slowing cross-divisional technological decisions.</li>
-                                <li className="flex gap-2"><span className="text-orange-500 text-[8px] mt-1.5">●</span> <strong>Financial compression:</strong> Operating margin declined as capital expenditure toward BEV transition eroded cash flows.</li>
+                                <li className="flex gap-2"><span className="text-orange-500 text-[8px] mt-1.5">●</span> <strong>Organizational drag:</strong> Bureaucratic rigidity and a consensual culture occasionally slowing cross-divisional technological decisions compared to agile startups.</li>
+                                <li className="flex gap-2"><span className="text-orange-500 text-[8px] mt-1.5">●</span> <strong>Financial compression:</strong> Operating margin declined severely to 10.0% (FY2025) as capital expenditure toward BEV transition eroded immediate cash flows.</li>
                             </ul>
                         </div>
                         <div className="card-hover bg-zinc-950 border border-blue-500/20 rounded-none p-6 relative overflow-hidden">
                             <h4 className="text-[15px] font-semibold text-zinc-100 mb-4 tracking-tight">Opportunities</h4>
                             <ul className="space-y-2 text-zinc-300 text-[14px]">
-                                <li className="flex gap-2"><span className="text-blue-500 text-[8px] mt-1.5">●</span> <strong>Macroeconomic tailwinds:</strong> Sustained weak Yen dramatically boosting profitability of domestic exports.</li>
-                                <li className="flex gap-2"><span className="text-blue-500 text-[8px] mt-1.5">●</span> <strong>Consumer hesitation:</strong> Surging demand for hybrid vehicles as range anxiety prevents full BEV commitment.</li>
+                                <li className="flex gap-2"><span className="text-blue-500 text-[8px] mt-1.5">●</span> <strong>Macroeconomic tailwinds:</strong> Sustained weak Japanese Yen dramatically boosting the profitability margin of vehicles built domestically and exported globally.</li>
+                                <li className="flex gap-2"><span className="text-blue-500 text-[8px] mt-1.5">●</span> <strong>Consumer hesitation:</strong> Surging global demand for hybrid vehicles as range anxiety prevents consumers from fully committing to BEVs.</li>
                                 <li className="flex gap-2"><span className="text-blue-500 text-[8px] mt-1.5">●</span> <strong>Policy advantages:</strong> Lucrative subsidies explicitly designed for eco-mobility and domestic battery localization.</li>
                             </ul>
                         </div>
                         <div className="card-hover bg-zinc-950 border border-red-500/20 rounded-none p-6 relative overflow-hidden">
                             <h4 className="text-[15px] font-semibold text-red-500 mb-4 tracking-tight">Threats</h4>
                             <ul className="space-y-2 text-zinc-300 text-[14px]">
-                                <li className="flex gap-2"><span className="text-red-500 text-[8px] mt-1.5">●</span> <strong>Geopolitical instability:</strong> Escalating U.S. tariffs disrupting high-profit imported export models.</li>
+                                <li className="flex gap-2"><span className="text-red-500 text-[8px] mt-1.5">●</span> <strong>Geopolitical instability:</strong> Escalating U.S. tariffs and protectionist trade agreements directly disrupting high-profit imported export models.</li>
                                 <li className="flex gap-2"><span className="text-red-500 text-[8px] mt-1.5">●</span> <strong>Hyper-competition:</strong> Aggressive low-cost Chinese EV OEMs (BYD, SAIC) utilizing depressed labor costs.</li>
-                                <li className="flex gap-2"><span className="text-red-500 text-[8px] mt-1.5">●</span> <strong>Legislative shifts:</strong> Potential elimination of federal EV tax credits reducing consumer BEV demand.</li>
+                                <li className="flex gap-2"><span className="text-red-500 text-[8px] mt-1.5">●</span> <strong>Legislative shifts:</strong> Potential rapid elimination of federal EV tax credits in key Western markets critically reducing consumer BEV demand.</li>
                             </ul>
                         </div>
                     </div>
@@ -256,15 +293,15 @@ export default function App() {
                                     <tbody>
                                         <tr>
                                             <td className="p-3 border-b border-zinc-800 border-l-[3px] border-l-emerald-500 font-medium text-white">SO: Maxi-Maxi</td>
-                                            <td className="p-3 border-b border-zinc-800 text-zinc-400">Monetize weak Yen by scaling exports of high-margin Camry and RAV4 hybrids.</td>
+                                            <td className="p-3 border-b border-zinc-800 text-zinc-400">Monetize the sustained weak Yen by aggressively scaling exports of high-margin Camry and RAV4 hybrids from Japanese plants. Simultaneously, lead government-subsidized electrification initiatives globally.</td>
                                         </tr>
                                         <tr>
                                             <td className="p-3 border-b border-zinc-800 border-l-[3px] border-l-orange-500 font-medium text-white">WO: Mini-Maxi</td>
-                                            <td className="p-3 border-b border-zinc-800 text-zinc-400">Tap into government green incentives to fund the $13.9B NC battery manufacturing plant.</td>
+                                            <td className="p-3 border-b border-zinc-800 text-zinc-400">Systematically tap into lucrative government green incentives (like the US Inflation Reduction Act) to aggressively fund and de-risk the massive $13.9B North Carolina battery manufacturing plant, closing the critical BEV technological lag against Tesla and BYD.</td>
                                         </tr>
                                         <tr>
                                             <td className="p-3 border-l-[3px] border-l-red-500 font-medium text-white">WT: Mini-Mini</td>
-                                            <td className="p-3 text-zinc-400">Preempt trade wars by reducing corporate break-even volumes and enforcing lean efficiency.</td>
+                                            <td className="p-3 text-zinc-400">Aggressively preempt shifting trade wars by reducing corporate break-even volumes. Under CEO Kenta Kon, Toyota is restructuring domestic operations to withstand tariff-driven margin compression by enforcing extreme lean manufacturing efficiencies.</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -274,21 +311,21 @@ export default function App() {
                         <div>
                             <h3 className="text-[18px] font-medium text-white mb-6 flex items-center gap-3"><Waves className="text-blue-500" /> 3. Blue ocean (ERRC)</h3>
                             <div className="grid grid-cols-2 gap-3 h-full">
-                                <div className="bg-black p-4 rounded-none border border-zinc-800 text-[13px]">
+                                <div className="bg-black p-4 rounded-none border border-zinc-800 text-[12px]">
                                     <span className="text-red-500 font-medium block mb-1">Eliminate</span>
-                                    Archaic single-powertrain dependency across new model platforms.
+                                    The archaic single-powertrain dependency across new model platforms. Future vehicle platforms must natively support ICE, HEV, and BEV drivetrains interchangeably on the same assembly lines to eliminate re-tooling dead time.
                                 </div>
-                                <div className="bg-black p-4 rounded-none border border-zinc-800 text-[13px]">
+                                <div className="bg-black p-4 rounded-none border border-zinc-800 text-[12px]">
                                     <span className="text-orange-500 font-medium block mb-1">Reduce</span>
-                                    Corporate break-even volume and rare-earth intensive battery architectures.
+                                    Corporate break-even volume and crippling reliance on hyper-expensive, rare-earth intensive battery-only architectures that restrict profitability to high-income luxury demographics.
                                 </div>
-                                <div className="bg-black p-4 rounded-none border border-zinc-800 text-[13px]">
+                                <div className="bg-black p-4 rounded-none border border-zinc-800 text-[12px]">
                                     <span className="text-emerald-500 font-medium block mb-1">Raise</span>
-                                    Global accessibility of sustainable mobility via affordable HEV models.
+                                    The global accessibility of electrified and sustainable mobility via affordable, highly durable HEV models across lower-to-middle income brackets, particularly in Southeast Asia and South America.
                                 </div>
-                                <div className="bg-black p-4 rounded-none border border-zinc-800 text-[13px]">
+                                <div className="bg-black p-4 rounded-none border border-zinc-800 text-[12px]">
                                     <span className="text-blue-500 font-medium block mb-1">Create</span>
-                                    "Mobility-as-a-Service" paradigm under the Beyond Zero initiative.
+                                    A post-hardware <em>Mobility-as-a-Service</em> paradigm under the <em>Beyond Zero</em> initiative, deeply integrating physical cars with interconnected smart city grids and the globally synchronized <em>Digital Obeya</em> management cloud.
                                 </div>
                             </div>
                         </div>
@@ -304,7 +341,7 @@ export default function App() {
                     <div className="flex flex-col md:flex-row gap-8">
                         <div className="md:w-1/4">
                             <p className="text-[14px] text-zinc-400 mt-4 leading-relaxed font-normal">
-                                The BCG Matrix maps Toyota's complex product portfolio. Toyota actively balances its operations, relying on highly profitable legacy hybrid architectures to bankroll the multi-billion dollar capital expenditure required for the rapidly growing pure electric vehicle segments.
+                                The BCG Matrix maps Toyota's complex product portfolio across market growth and relative market share paradigms. Toyota actively balances its operations, relying on highly profitable legacy internal combustion and hybrid architectures to essentially bankroll the multi-billion dollar capital expenditure required to secure a foothold in the rapidly growing but intensely competitive pure electric vehicle segments.
                             </p>
                         </div>
                         
@@ -315,25 +352,25 @@ export default function App() {
                                 <div className="card-hover bg-zinc-900 border border-zinc-800 p-6 rounded-none min-h-[140px]">
                                     <h4 className="text-[15px] font-bold text-zinc-100 mb-2 tracking-tighter uppercase italic">Stars</h4>
                                     <p className="text-[13px] text-zinc-300 font-medium mb-1">HEV (Hybrids) & RAV4</p>
-                                    <p className="text-[12px] text-zinc-400">High share, high growth. Primary revenue drivers capturing transitional consumers.</p>
+                                    <p className="text-[12px] text-zinc-400">High share, high growth. These models are absolute juggernauts — the current primary revenue drivers, brilliantly capturing the transitional consumer demographic that wants electrification without range anxiety.</p>
                                 </div>
                                 {/* Question Mark */}
                                 <div className="card-hover bg-zinc-900 border border-zinc-800 p-6 rounded-none min-h-[140px]">
                                     <h4 className="text-[15px] font-bold text-zinc-300 mb-2 tracking-tighter uppercase italic">Question marks</h4>
                                     <p className="text-[13px] text-zinc-300 font-medium mb-1">BEV (bZ4X) & Hydrogen</p>
-                                    <p className="text-[12px] text-zinc-400">Low share, high growth. Requires massive R&D injections against EV rivals.</p>
+                                    <p className="text-[12px] text-zinc-400">Low share, high growth. These products require disproportionate, massive R&D capital injections to secure a long-term market footing against established EV rivals, yet return little to no immediate profit.</p>
                                 </div>
                                 {/* Cash Cow */}
                                 <div className="card-hover bg-zinc-900 border border-zinc-800 p-6 rounded-none min-h-[140px]">
                                     <h4 className="text-[15px] font-bold text-emerald-500 mb-2 tracking-tighter uppercase italic">Cash cows</h4>
                                     <p className="text-[13px] text-zinc-300 font-medium mb-1">ICE Trucks & SUVs</p>
-                                    <p className="text-[12px] text-zinc-400">High share, low growth. Profitable legacy stalwarts funding future bets.</p>
+                                    <p className="text-[12px] text-zinc-400">High share, low growth. These are the highly profitable, depreciated-tooling legacy stalwarts. They generate immense free cash flow, acting as the primary fiscal engine funding the futuristic BEV and Hydrogen bets.</p>
                                 </div>
                                 {/* Dog */}
                                 <div className="card-hover bg-zinc-900 border border-zinc-800 p-6 rounded-none min-h-[140px]">
                                     <h4 className="text-[15px] font-bold text-zinc-500 mb-2 tracking-tighter uppercase italic">Dogs</h4>
                                     <p className="text-[13px] text-zinc-300 font-medium mb-1">Compact ICE Sedans</p>
-                                    <p className="text-[12px] text-zinc-400">Low share, low growth. Divesting from non-hybrid traditional segments.</p>
+                                    <p className="text-[12px] text-zinc-400">Low share, low growth. With global consumer preferences decisively shifting towards larger SUVs and CUVs, Toyota is actively consolidating and divesting from non-hybrid traditional sedan segments to prevent capital drain.</p>
                                 </div>
                             </div>
                         </div>
@@ -349,27 +386,27 @@ export default function App() {
                         <div className="card-hover bg-zinc-950 border-t-[3px] border-red-600 p-5 rounded-none">
                             <h5 className="font-semibold text-white mb-1 tracking-tight">Rivalry</h5>
                             <span className="text-[13px] font-medium text-red-500 tracking-wider">Very high</span>
-                            <p className="text-[13px] text-zinc-400 mt-2 font-normal">Direct confrontion on multiple fronts: legacy giants and heavily subsidized Chinese EV OEMs triggering margin compression.</p>
+                            <p className="text-[13px] text-zinc-400 mt-2 font-normal">Toyota is engaged in direct, brutal confrontation on multiple fronts: legacy giants like VW and Hyundai pushing heavy volume, and heavily subsidized, aggressive Chinese EV OEMs (BYD, SAIC) triggering severe global margin compression and price wars.</p>
                         </div>
                         <div className="card-hover bg-zinc-950 border-t-[3px] border-orange-500 p-5 rounded-none">
                             <h5 className="font-semibold text-white mb-1 tracking-tight">Buyers</h5>
                             <span className="text-[13px] font-medium text-orange-400 tracking-wider">Mod-high</span>
-                            <p className="text-[13px] text-zinc-400 mt-2 font-normal">Consumers expect high-tech electrification as a standard baseline, amplified by price sensitivity under subsidy shifts.</p>
+                            <p className="text-[13px] text-zinc-400 mt-2 font-normal">Armed with near-perfect digital pricing transparency, modern consumers expect high-tech electrification as a standard baseline, not a premium feature. The loss or reduction of federal EV tax credits further amplifies this intense demographic price sensitivity.</p>
                         </div>
                         <div className="card-hover bg-zinc-950 border-t-[3px] border-orange-500 p-5 rounded-none">
                             <h5 className="font-semibold text-white mb-1 tracking-tight">Suppliers</h5>
                             <span className="text-[13px] font-medium text-orange-400 tracking-wider">Mod-high</span>
-                            <p className="text-[13px] text-zinc-400 mt-2 font-normal">Extreme reliance on concentrated global supply chains for rare-earth minerals and advanced semiconductor chips.</p>
+                            <p className="text-[13px] text-zinc-400 mt-2 font-normal">Automakers face extreme reliance on heavily concentrated global supply chains for rare-earth battery minerals and advanced semiconductor chips. Toyota aggressively counters this extortion leverage via massive vertical integration, notably its in-house $13.9B NC battery campus.</p>
                         </div>
                         <div className="card-hover bg-zinc-950 border-t-[3px] border-yellow-500 p-5 rounded-none">
                             <h5 className="font-semibold text-white mb-1 tracking-tight">New entrants</h5>
                             <span className="text-[13px] font-medium text-yellow-500 tracking-wider">Moderate</span>
-                            <p className="text-[13px] text-zinc-400 mt-2 font-normal">Tech-first firms are bypassing legacy ICE manufacturing entirely, supported directly by foreign government subsidies.</p>
+                            <p className="text-[13px] text-zinc-400 mt-2 font-normal">Historically, manufacturing required massive capital barriers. Now, well-funded software-first technology firms (like Tesla originally, or emerging tech-auto joint ventures) are bypassing legacy engine manufacturing entirely, supported directly by foreign government EV subsidies.</p>
                         </div>
                         <div className="card-hover bg-zinc-950 border-t-[3px] border-yellow-500 p-5 rounded-none lg:col-span-2">
                             <h5 className="font-semibold text-white mb-1 tracking-tight">Substitutes</h5>
                             <span className="text-[13px] font-medium text-yellow-500 tracking-wider">Moderate</span>
-                            <p className="text-[13px] text-zinc-400 mt-2 font-normal">Urban mobility platforms and high-speed rail threaten the ownership model. Toyota's pivot to "mobility provider" hedges this.</p>
+                            <p className="text-[13px] text-zinc-400 mt-2 font-normal">The rise of ubiquitous urban mobility platforms (Uber, DiDi, Lyft), advanced high-speed rail, and micro-mobility solutions fundamentally threaten the private ownership model. Toyota's strategic pivot into a broad <em>mobility provider</em> deliberately hedges against this post-ownership future.</p>
                         </div>
                     </div>
                 </div>
@@ -382,8 +419,11 @@ export default function App() {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <div>
-                            <p className="text-[16px] text-zinc-400 mb-4 leading-relaxed font-normal">
-                                Historically, Toyota operated under a highly centralized "spoke-and-wheel" global hierarchy. Today, they utilize a decentralized <strong>3D matrix structure</strong>, balancing global product standardization with hyper-local regional market responsiveness.
+                            <p className="text-[15px] text-zinc-400 mb-3 leading-relaxed font-normal">
+                                Historically, Toyota operated under a highly centralized, rigid <em>spoke-and-wheel</em> global hierarchy strictly managed from Japan. This archaic command-and-control structure proved catastrophic during the devastating 2009–2010 unintended acceleration crisis. Communication bottlenecks delayed critical quality-control responses, nearly destroying the brand's reputation for reliability.
+                            </p>
+                            <p className="text-[15px] text-zinc-400 mb-4 leading-relaxed font-normal">
+                                Learning from this profound failure, Akio Toyoda orchestrated a radical dismantling of the core hierarchy. Today, they utilize a decentralized <strong>3D matrix structure</strong>, balancing global product standardization with hyper-local regional market responsiveness.
                             </p>
 
                             <div className="space-y-3">
@@ -392,14 +432,14 @@ export default function App() {
                                         <Globe className="text-red-500" size={18} />
                                         <h4 className="text-[14px] font-semibold text-white">Geographic divisions</h4>
                                     </div>
-                                    <p className="text-zinc-400 text-[13px]">Executive authorities maximize responsiveness to localized consumer demands and regulatory climates.</p>
+                                    <p className="text-zinc-400 text-[13px]">Establishment of powerful, dedicated regional executive authorities covering Japan, North America, Europe, Asia, and China. These divisions operate with semi-autonomy, maximizing responsiveness to localized consumer demands, differing regulatory climates, and sudden geopolitical trade shifts without waiting for Tokyo's permission.</p>
                                 </div>
                                 <div className="card-hover bg-zinc-950 border border-zinc-800 p-4 rounded-none">
                                     <div className="flex items-center gap-3 mb-2">
                                         <Car className="text-red-500" size={18} />
                                         <h4 className="text-[14px] font-semibold text-white">Product-based units</h4>
                                     </div>
-                                    <p className="text-zinc-400 text-[13px]">Agile entities like Lexus International foster rapid innovation free from overarching corporate bureaucracy.</p>
+                                    <p className="text-zinc-400 text-[13px]">A groundbreaking shift from functional silos to product-based divisions (e.g., Lexus International, Mid-size Vehicle Company, Powertrain Unit Center). These units act as pseudo-independent agile entities, fostering rapid innovation, localized P&L accountability, and accelerated development cycles free from overarching macro-corporate bureaucracy.</p>
                                 </div>
                             </div>
                         </div>
@@ -407,9 +447,11 @@ export default function App() {
                         <div className="flex flex-col gap-4">
                             <div className="bg-zinc-950 p-6 rounded-none border border-zinc-800">
                                 <h4 className="text-[15px] font-semibold text-white mb-3 flex items-center gap-3 tracking-tight"><Scale className="text-red-500" /> Board governance</h4>
-                                <ul className="space-y-2 text-[13px] text-zinc-300 font-normal">
-                                    <li className="flex gap-2 items-start"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-1" /> <span>50% of the 10 board directors are now independent, outside directors to counter groupthink.</span></li>
-                                    <li className="flex gap-2 items-start"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-1" /> <span>Board delegates day-to-day granular execution tasks entirely to lower executives.</span></li>
+                                <p className="text-[12px] text-zinc-400 mb-3">To ensure extreme operational agility and transparency, Toyota transitioned in June 2025 to a modern <em>company with an audit and supervisory committee</em>.</p>
+                                <ul className="space-y-2 text-[12px] text-zinc-300 font-normal">
+                                    <li className="flex gap-2 items-start"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-1" /> <span>Former standard auditors elevated to full board members with equal, unmitigated voting rights on corporate strategy.</span></li>
+                                    <li className="flex gap-2 items-start"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-1" /> <span>Exactly half of the 10 board directors are now independent, outside directors — mathematically countering entrenched internal groupthink and legacy cronyism.</span></li>
+                                    <li className="flex gap-2 items-start"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-1" /> <span>Board delegates day-to-day granular execution entirely to lower executives, focusing purely on macro-strategic oversight and risk assessment.</span></li>
                                 </ul>
                             </div>
 
@@ -419,12 +461,12 @@ export default function App() {
                                     <div>
                                         <h5 className="font-semibold text-[15px]">Koji Sato</h5>
                                         <div className="text-[11px] font-medium text-red-200 uppercase mb-1">JAMA Chairman</div>
-                                        <p className="text-[12px] text-red-100">Focusing on macro-national policy and industrial competitiveness.</p>
+                                        <p className="text-[12px] text-red-100">Transitions outward from direct operations. Now focuses entirely on shaping macro-national policy as JAMA Chairman, coordinating with the Japanese government to enhance Japan's industrial competitiveness against China.</p>
                                     </div>
                                     <div>
                                         <h5 className="font-semibold text-[15px]">Kenta Kon</h5>
                                         <div className="text-[11px] font-medium text-red-200 uppercase mb-1">President & CEO</div>
-                                        <p className="text-[12px] text-red-100">Deploying financial defenses and lowering corporate break-even volumes.</p>
+                                        <p className="text-[12px] text-red-100">An unorthodox, aggressive move placing the former CFO at the executive helm. Kon is explicitly deployed to meticulously lower corporate break-even volumes and engineer financial defenses in a profound war of global financial attrition.</p>
                                     </div>
                                 </div>
                             </div>
@@ -440,11 +482,11 @@ export default function App() {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <div>
-                            <p className="text-[16px] text-zinc-300 mb-4 leading-relaxed font-normal">
-                                Toyota views its 380,000 global employees collectively as the company's only true appreciating asset. This philosophy is anchored by the historic <strong>psychological contract</strong>.
+                            <p className="text-[15px] text-zinc-300 mb-3 leading-relaxed font-normal">
+                                Toyota fundamentally rejects the traditional Western manufacturing model of treating human labor strictly as an expendable variable cost to be minimized during economic downturns. Instead, its massive network of 380,000 global employees is systematically viewed as the company's only true appreciating asset.
                             </p>
-                            <p className="text-[15px] text-zinc-400 mb-6 leading-relaxed font-normal">
-                                Guaranteed long-term employment creates an intensely loyal, universally cross-trained workforce that preserves specialized generational institutional knowledge.
+                            <p className="text-[14px] text-zinc-400 mb-5 leading-relaxed font-normal">
+                                Forged in the fires of a devastating 1962 labor strike, this permanent labor-management agreement guarantees long-term (often lifetime) employment for its core domestic workforce. In exchange, the company commands absolute ownership of all resulting productivity improvements and automation efficiencies. This social compact creates an intensely loyal, universally low-turnover environment that preserves highly specialized, generational institutional knowledge — preventing competitors from poaching Toyota's most experienced master craftsmen (Takumi).
                             </p>
 
                             <div className="space-y-3">
@@ -453,14 +495,14 @@ export default function App() {
                                         <Users className="text-red-500" size={18} />
                                         <h4 className="text-[14px] font-semibold text-white">Blue-collar integration</h4>
                                     </div>
-                                    <p className="text-zinc-400 text-[13px]">Immersive On-the-Job Training pairing new hires with strict veteran mentors for Takumi-level skill transfer.</p>
+                                    <p className="text-zinc-400 text-[12px]">Comprehensive, deeply immersive On-the-Job Training (OJT), pairing inexperienced new hires exclusively with strict veteran mentors. A relentless process of systematic job rotation cycles every worker through assembly, quality assurance, and logistics — ensuring a universally cross-trained, hyper-resilient factory workforce.</p>
                                 </div>
                                 <div className="card-hover bg-zinc-950 border border-zinc-800 p-4 rounded-none">
                                     <div className="flex items-center gap-3 mb-2">
                                         <Globe className="text-red-500" size={18} />
                                         <h4 className="text-[14px] font-semibold text-white">Global 21 Pipeline</h4>
                                     </div>
-                                    <p className="text-zinc-400 text-[13px]">High-potential employees undergo demanding overseas assignments to acquire cross-cultural leadership skills.</p>
+                                    <p className="text-zinc-400 text-[12px]">The corporate engine that cultivates global executive leadership. High-potential mid-career employees are deliberately forced into heavily demanding overseas assignments or sponsored MBA programs to acquire cross-cultural, macro-operational skills before ever being considered for senior domestic roles.</p>
                                 </div>
                             </div>
                         </div>
@@ -469,21 +511,25 @@ export default function App() {
                             <div className="absolute top-0 right-0 p-4 opacity-5"><FileText size={100} /></div>
                             <h4 className="text-[15px] font-medium text-white mb-4 relative z-10 uppercase tracking-wider">Appraisal pillars</h4>
                             <div className="grid grid-cols-1 gap-2 relative z-10">
-                                <div className="bg-zinc-950 p-3 border border-zinc-800 border-l-[3px] border-l-red-500 text-[12px]">
-                                    <strong className="text-white block font-medium mb-1">Physical skills (Takt)</strong>
-                                    <span className="text-zinc-400">Ability to handle complex assembly strictly within cycle limits.</span>
+                                <div className="bg-zinc-950 p-3 border border-zinc-800 border-l-[3px] border-l-red-500 text-[11px]">
+                                    <strong className="text-white block font-medium mb-1">1. Physical skills (Takt)</strong>
+                                    <span className="text-zinc-400">The raw physical ability to handle complex assembly tasks strictly within the mathematically designated takt time cycle, without degrading overall product quality or safety.</span>
                                 </div>
-                                <div className="bg-zinc-950 p-3 border border-zinc-800 border-l-[3px] border-l-red-500 text-[12px]">
-                                    <strong className="text-white block font-medium mb-1">Quality Maintenance</strong>
-                                    <span className="text-zinc-400">Absolute adherence to zero-defect manufacturing standards.</span>
+                                <div className="bg-zinc-950 p-3 border border-zinc-800 border-l-[3px] border-l-red-500 text-[11px]">
+                                    <strong className="text-white block font-medium mb-1">2. Quality maintenance</strong>
+                                    <span className="text-zinc-400">A track record of absolute adherence to the factory's stringent zero-defect manufacturing standards, demonstrating vigilance against letting flawed components pass down the line.</span>
                                 </div>
-                                <div className="bg-zinc-950 p-3 border border-zinc-800 border-l-[3px] border-l-red-500 text-[12px]">
-                                    <strong className="text-white block font-medium mb-1">Kaizen participation</strong>
-                                    <span className="text-zinc-400">Documented proof of suggesting continuous improvement iterations.</span>
+                                <div className="bg-zinc-950 p-3 border border-zinc-800 border-l-[3px] border-l-red-500 text-[11px]">
+                                    <strong className="text-white block font-medium mb-1">3. Kaizen participation</strong>
+                                    <span className="text-zinc-400">Proof of active, consistently documented participation in the continuous improvement process (Kaizen), frequently suggesting and implementing small, iterative efficiency boosts.</span>
                                 </div>
-                                <div className="bg-zinc-950 p-3 border border-zinc-800 border-l-[3px] border-l-red-500 text-[12px]">
-                                    <strong className="text-white block font-medium mb-1">Big picture view</strong>
-                                    <span className="text-zinc-400">Connecting daily assembly targets to macro corporate objectives.</span>
+                                <div className="bg-zinc-950 p-3 border border-zinc-800 border-l-[3px] border-l-red-500 text-[11px]">
+                                    <strong className="text-white block font-medium mb-1">4. Big picture view</strong>
+                                    <span className="text-zinc-400">The cognitive ability to clearly articulate exactly how their microscopic daily assembly targets directly derive from and support the broader macro corporate objectives.</span>
+                                </div>
+                                <div className="bg-zinc-950 p-3 border border-zinc-800 border-l-[3px] border-l-red-500 text-[11px]">
+                                    <strong className="text-white block font-medium mb-1">5. Problem solving</strong>
+                                    <span className="text-zinc-400">Proven capability to independently execute comprehensive root-cause analysis (utilizing the <em>5 Whys</em> methodology) and immediately deploy corrective countermeasures.</span>
                                 </div>
                             </div>
                         </div>
@@ -495,34 +541,41 @@ export default function App() {
                 <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-white">
                     <div>
                         <SectionHeading subtitle="Chapter 5: Leading" title="Facilitating horizontal alignment" light={true} />
-                        <p className="text-[16px] text-red-100 mb-6 leading-relaxed font-normal">
-                            Leadership at Toyota is defined by meticulous facilitation and dismantling silos. Leaders are coaches at the <em>genba</em>, not drill sergeants in offices.
+                        <p className="text-[14px] text-red-100 mb-5 leading-relaxed font-normal">
+                            Leadership at Toyota is a profound, structural rejection of traditional, vertical, autocratic directives common in standard manufacturing environments. Instead, it is defined entirely by meticulous facilitation, dismantling restrictive corporate silos, and intensely empowering subordinates at the <em>genba</em> (the actual place value is physically created). Leaders are coaches meant to guide continuous improvement, not drill sergeants barking orders from air-conditioned offices.
                         </p>
 
-                        <div className="space-y-4">
+                        <div className="space-y-3">
                             <div className="bg-black/20 p-4 rounded-none border border-white/10">
-                                <h4 className="text-[16px] font-medium mb-1 flex items-center gap-3"><Users size={18} /> The Obeya System</h4>
-                                <p className="text-red-100 text-[13px]">Cross-functional leaders converge in a "Big Room" for rapid, face-to-face collaborative decision-making.</p>
+                                <h4 className="text-[15px] font-medium mb-1 flex items-center gap-3"><Users size={18} /> The Obeya System</h4>
+                                <p className="text-red-100 text-[12px]">Literally translated as the <em>Big Room</em>. Cross-functional leaders and engineers from inherently conflicting departments converge daily in a highly visual, physical workspace to practice <em>genchi genbutsu</em> (going to the source). Walls are aggressively plastered with simplified A3 problem-solving documents and critical-path schedules. This radically transparent environment demolishes email chains and forces rapid, face-to-face collaborative decision-making across the entire engineering pipeline.</p>
                             </div>
                             <div className="bg-black/20 p-4 rounded-none border border-white/10">
-                                <h4 className="text-[16px] font-medium mb-1 flex items-center gap-3"><Lightbulb size={18} /> Toyota Times</h4>
-                                <p className="text-red-100 text-[13px]">Internal-turned-external open-media channel projecting management thoughts directly to the global workforce.</p>
+                                <h4 className="text-[15px] font-medium mb-1 flex items-center gap-3"><Lightbulb size={18} /> Toyota Times</h4>
+                                <p className="text-red-100 text-[12px]">Spearheaded directly by Chairman Akio Toyoda in 2020. This internal-turned-external open-media channel projects top management's unfiltered thoughts, candid failures, and strategic anxieties directly to the public and the global workforce. By bypassing traditional corporate PR buffering, it deliberately cultivates an unprecedented atmosphere of absolute transparency, systematically building bottom-up systemic trust throughout the organization.</p>
                             </div>
                         </div>
                     </div>
 
                     <div className="bg-white text-zinc-900 p-8 rounded-none shadow-2xl">
-                        <h4 className="text-[18px] font-bold mb-4 text-red-600 uppercase tracking-tighter italic">Innovation Democratized</h4>
-                        <p className="text-[14px] text-zinc-600 mb-6">Established in 1951, TCISS grants creative autonomy to line workers, shifting management from dictating to coaching.</p>
+                        <h4 className="text-[16px] font-bold mb-3 text-red-600 uppercase tracking-tighter italic">Democratizing Innovation</h4>
+                        <p className="text-[12px] text-zinc-600 mb-4">The globally renowned <em>Toyota Creative Idea Suggestion System (TCISS)</em>, established in 1951, successfully democratized mass innovation. By granting complete creative autonomy to line workers, leadership effectively shifted its role from statically dictating processes to actively coaching employees on how to intelligently identify and permanently solve their own workspace abnormalities.</p>
 
-                        <div className="flex items-center gap-6 mb-6 border-b border-zinc-100 pb-6">
-                            <div className="text-[28px] font-bold text-zinc-900">40M+</div>
-                            <div className="text-[12px] font-medium text-zinc-500 uppercase tracking-widest leading-none">Employee Ideas<br/>Submitted</div>
+                        <div className="flex items-center gap-6 mb-4 border-b border-zinc-100 pb-4">
+                            <div className="text-[26px] font-bold text-zinc-900">40M+</div>
+                            <div className="text-[11px] font-medium text-zinc-500 uppercase tracking-widest leading-none">Employee Ideas<br/>Submitted</div>
                         </div>
 
-                        <div className="bg-zinc-100 p-4 border-l-[3px] border-red-600">
-                            <h5 className="font-bold text-[14px] mb-1 uppercase">The Rookie Award</h5>
-                            <p className="text-zinc-600 text-[13px]">Mandatory 36 actionable suggestions annually for new hires, breaking complacent habits immediately.</p>
+                        <div className="grid grid-cols-2 gap-2 mb-4 text-[11px]">
+                            <div className="bg-zinc-50 p-2 border border-zinc-200"><span className="font-bold text-zinc-700">Standard prize</span><br/><span className="text-zinc-500">500 ¥</span></div>
+                            <div className="bg-zinc-50 p-2 border border-zinc-200"><span className="font-bold text-zinc-700">Outstanding</span><br/><span className="text-zinc-500">2,000 ¥</span></div>
+                            <div className="bg-zinc-50 p-2 border border-zinc-200"><span className="font-bold text-zinc-700">Excellent</span><br/><span className="text-zinc-500">5,000 ¥</span></div>
+                            <div className="bg-zinc-50 p-2 border border-zinc-200"><span className="font-bold text-zinc-700">Best award</span><br/><span className="text-zinc-500">10k–200k ¥</span></div>
+                        </div>
+
+                        <div className="bg-zinc-100 p-3 border-l-[3px] border-red-600">
+                            <h5 className="font-bold text-[13px] mb-1 uppercase">The Rookie Award</h5>
+                            <p className="text-zinc-600 text-[12px]">Exclusively targets 1st and 2nd-year entry employees, coercing them to successfully generate at least <strong>36 actionable efficiency suggestions annually</strong> (roughly 3 innovations per month). This radically breaks young workers from complacent habits immediately upon hiring.</p>
                         </div>
                     </div>
                 </div>
@@ -533,8 +586,8 @@ export default function App() {
                 <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <div>
                         <SectionHeading subtitle="Chapter 6: Controlling" title="Financial oversight" />
-                        <p className="text-zinc-400 mb-8 leading-relaxed text-[15px] font-normal">
-                            Rigorous controlling reveal a dual reality: massive top-line growth offset by severe margin compression due to colossal CapEx outlays (NC Battery campus) and raw material inflation.
+                        <p className="text-zinc-400 mb-6 leading-relaxed text-[14px] font-normal">
+                            Rigorous financial controlling models reveal a volatile dual reality defining Toyota's current operational state: massive, record-breaking top-line revenue growth across global markets is being brutally offset by severe margin compression. This profit tightening is fundamentally caused by colossal capital expenditures — such as the massive $13.9B outlay for the North Carolina battery campus — compounded by soaring macro-inflation surrounding raw materials used in hybrid circuits.
                         </p>
 
                         <div className="space-y-4 bg-zinc-950 p-6 rounded-none border border-zinc-800">
@@ -550,29 +603,50 @@ export default function App() {
                             </div>
                             <div>
                                 <div className="flex justify-between text-[12px] font-medium text-white mb-2 uppercase tracking-widest">
+                                    <span>FY24 Operating Margin</span>
+                                    <span className="text-emerald-500">Historic high</span>
+                                </div>
+                                <div className="h-6 bg-zinc-900 rounded-none overflow-hidden relative">
+                                    <div className="absolute top-0 left-0 h-full bg-emerald-600 w-[85%]"></div>
+                                    <div className="absolute top-0 left-0 h-full flex items-center px-4 text-white text-[12px] font-bold z-10">11.9%</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="flex justify-between text-[12px] font-medium text-white mb-2 uppercase tracking-widest">
                                     <span>FY25 Margin Forecast</span>
-                                    <span className="text-red-500">-1.9%</span>
+                                    <span className="text-red-500">-1.9pp</span>
                                 </div>
                                 <div className="h-6 bg-zinc-900 rounded-none overflow-hidden relative">
                                     <div className="absolute top-0 left-0 h-full bg-orange-600 w-[71%]"></div>
-                                    <div className="absolute top-0 left-0 h-full flex items-center px-4 text-white text-[12px] font-bold z-10">10.0%</div>
+                                    <div className="absolute top-0 left-0 h-full flex items-center px-4 text-white text-[12px] font-bold z-10">10.0% (Triggered CEO shift)</div>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="flex justify-between text-[12px] font-medium text-white mb-2 uppercase tracking-widest">
+                                    <span>Return on Equity (ROE)</span>
+                                    <span className="text-red-500">-2.2pp</span>
+                                </div>
+                                <div className="h-6 bg-zinc-900 rounded-none overflow-hidden relative">
+                                    <div className="absolute top-0 left-0 h-full bg-purple-600 w-[68%]"></div>
+                                    <div className="absolute top-0 left-0 h-full flex items-center px-4 text-white text-[12px] font-bold z-10">13.6%</div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div className="card-hover bg-zinc-950 border border-zinc-800 rounded-none p-8 flex flex-col justify-center">
-                        <h3 className="text-[17px] font-bold text-white mb-6 flex items-center gap-3 italic tracking-tighter uppercase">
+                        <h3 className="text-[16px] font-bold text-white mb-3 flex items-center gap-3 italic tracking-tighter uppercase">
                             <ShieldCheck className="text-red-500" /> Executive Compliance
                         </h3>
-                        <div className="relative border-l-[3px] border-red-600 pl-6 space-y-6">
+                        <p className="text-[12px] text-zinc-400 mb-5">Following severe, multi-year crash-test certification violations discovered internally at critical subsidiaries like Hino and Daihatsu, Toyota's executive board felt regulatory heat from the Japanese government. In response, they forcibly instituted a series of draconian, no-exception compliance overhauls across the global empire.</p>
+                        <div className="relative border-l-[3px] border-red-600 pl-6 space-y-5">
                             <div>
-                                <h5 className="text-[15px] font-bold text-white mb-1">Global CCO Mandate</h5>
-                                <p className="text-[13px] text-zinc-400 font-normal">Centralized role wielding absolute veto authority over factory compliance, reporting directly to the CEO.</p>
+                                <h5 className="text-[14px] font-bold text-white mb-1">Global CCO Mandate</h5>
+                                <p className="text-[12px] text-zinc-400 font-normal">A newly established centralized role that wields unmitigated, absolute veto authority over factory line compliance issues. The GCCO directly chairs the critical Compliance Committee alongside the Risk Management board to ensure regulatory deviations are reported directly to the CEO, entirely bypassing middle management coverups.</p>
                             </div>
                             <div>
-                                <h5 className="text-[15px] font-bold text-white mb-1">Regional Delegates</h5>
-                                <p className="text-[13px] text-zinc-400 font-normal">Ensuring localized cultural nuances do not obscure or contradict Japanese corporate governance.</p>
+                                <h5 className="text-[14px] font-bold text-white mb-1">Regional Delegates</h5>
+                                <p className="text-[12px] text-zinc-400 font-normal">Strategically appointed across heavily regulated territories like North America and the EU to ensure specific, localized cultural management nuances do not obscure or contradict high-level Japanese corporate governance mandates.</p>
                             </div>
                         </div>
                     </div>
@@ -589,12 +663,12 @@ export default function App() {
                         <div className="bg-zinc-950 p-6 border border-zinc-800 rounded-none">
                             <Zap className="text-yellow-500 mb-4" size={24} />
                             <h5 className="text-[16px] font-bold text-white mb-2">Global EMIS Cloud</h5>
-                            <p className="text-[13px] text-zinc-400">Algorithmic assessment of chemical toxicity risks prevent banned substances from entering the supply chain.</p>
+                            <p className="text-[13px] text-zinc-400">The <em>Ecology, Safety and Health Material Investigation System</em> automatically and algorithmically assesses the chemical toxicity risks of millions of supplier parts in real-time. This prevents banned substances from entering the localized supply chain to ensure zero European or US environmental regulatory deviations.</p>
                         </div>
                         <div className="bg-zinc-950 p-6 border border-zinc-800 rounded-none">
                             <Target className="text-red-500 mb-4" size={24} />
                             <h5 className="text-[16px] font-bold text-white mb-2">TEAM Award KPI</h5>
-                            <p className="text-[13px] text-zinc-400">Suppliers evaluated against microscopic defect rates and minute-level delivery precision.</p>
+                            <p className="text-[13px] text-zinc-400">Third-party suppliers are relentlessly and transparently evaluated against microscopic defect rates, minute-level delivery precision, and sustained, multi-year cost reduction trajectories. Excellence is publicly rewarded via the prestigious <em>Total Exceptional Achievement for Manufacturing</em> (TEAM) corporate award.</p>
                         </div>
                     </div>
                 </div>
@@ -606,7 +680,7 @@ export default function App() {
                     <Car size={64} className="text-zinc-800 mx-auto mb-8" />
                     <h2 className="text-[28px] font-bold text-white mb-8 italic uppercase tracking-tighter">The Vanguard of Global Management</h2>
                     <p className="text-[16px] text-zinc-400 font-normal leading-relaxed mb-12">
-                        Toyota operates as a deeply integrated, highly self-correcting sociotechnical system. By balancing historical philosophy with brutal modern pragmatism, Toyota dictates the future trajectory of global mobility.
+                        Toyota operates not merely as an automobile manufacturer, but as a deeply integrated, highly self-correcting sociotechnical system. By perfectly balancing the stability of its historical philosophy with the brutal pragmatism required by modern markets, Toyota is uniquely positioned to dictate the future trajectory of global mobility.
                     </p>
                     <div className="text-[13px] text-zinc-500 font-bold uppercase tracking-[0.3em]">
                         MIT Manipal | Math and Computing 2027
