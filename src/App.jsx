@@ -412,183 +412,268 @@ export default function App() {
                 </div>
             </Slide>
 
-            {/* --- CHAPTER 3: ORGANIZING --- */}
+            {/* --- CHAPTER 3: ORGANIZING (Intro) --- */}
             <Slide border="border-t border-zinc-800">
                 <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
                     <SectionHeading subtitle="Chapter 3: Organizing" title="Structuring the empire" />
-
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <div>
-                            <p className="text-[15px] text-zinc-400 mb-3 leading-relaxed font-normal">
-                                Historically, Toyota operated under a highly centralized, rigid <em>spoke-and-wheel</em> global hierarchy strictly managed from Japan. This archaic command-and-control structure proved catastrophic during the devastating 2009–2010 unintended acceleration crisis. Communication bottlenecks delayed critical quality-control responses, nearly destroying the brand's reputation for reliability.
+                            <p className="text-[16px] text-zinc-400 mb-4 leading-relaxed font-normal">
+                                Historically, Toyota operated under a highly centralized, rigid <em>spoke-and-wheel</em> global hierarchy strictly managed from the corporate epicenter in Japan. This archaic command-and-control structure proved catastrophic during the devastating 2009–2010 unintended acceleration crisis. Communication bottlenecks delayed critical quality-control responses, nearly destroying the brand's reputation for reliability.
                             </p>
-                            <p className="text-[15px] text-zinc-400 mb-4 leading-relaxed font-normal">
-                                Learning from this profound failure, Akio Toyoda orchestrated a radical dismantling of the core hierarchy. Today, they utilize a decentralized <strong>3D matrix structure</strong>, balancing global product standardization with hyper-local regional market responsiveness.
+                            <p className="text-[16px] text-zinc-400 mb-6 leading-relaxed font-normal">
+                                Learning from this profound failure, Akio Toyoda orchestrated a radical dismantling of the core hierarchy. Today, Toyota utilizes a highly dynamic, decentralized <strong>3D matrix structure</strong>, perfectly balancing macro-level global product standardization with hyper-local, regional market responsiveness.
                             </p>
-
-                            <div className="space-y-3">
-                                <div className="card-hover bg-zinc-950 border border-zinc-800 p-4 rounded-none">
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <Globe className="text-red-500" size={18} />
-                                        <h4 className="text-[14px] font-semibold text-white">Geographic divisions</h4>
-                                    </div>
-                                    <p className="text-zinc-400 text-[13px]">Establishment of powerful, dedicated regional executive authorities covering Japan, North America, Europe, Asia, and China. These divisions operate with semi-autonomy, maximizing responsiveness to localized consumer demands, differing regulatory climates, and sudden geopolitical trade shifts without waiting for Tokyo's permission.</p>
-                                </div>
-                                <div className="card-hover bg-zinc-950 border border-zinc-800 p-4 rounded-none">
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <Car className="text-red-500" size={18} />
-                                        <h4 className="text-[14px] font-semibold text-white">Product-based units</h4>
-                                    </div>
-                                    <p className="text-zinc-400 text-[13px]">A groundbreaking shift from functional silos to product-based divisions (e.g., Lexus International, Mid-size Vehicle Company, Powertrain Unit Center). These units act as pseudo-independent agile entities, fostering rapid innovation, localized P&L accountability, and accelerated development cycles free from overarching macro-corporate bureaucracy.</p>
-                                </div>
-                            </div>
                         </div>
-
-                        <div className="flex flex-col gap-4">
-                            <div className="bg-zinc-950 p-6 rounded-none border border-zinc-800">
-                                <h4 className="text-[15px] font-semibold text-white mb-3 flex items-center gap-3 tracking-tight"><Scale className="text-red-500" /> Board governance</h4>
-                                <p className="text-[12px] text-zinc-400 mb-3">To ensure extreme operational agility and transparency, Toyota transitioned in June 2025 to a modern <em>company with an audit and supervisory committee</em>.</p>
-                                <ul className="space-y-2 text-[12px] text-zinc-300 font-normal">
-                                    <li className="flex gap-2 items-start"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-1" /> <span>Former standard auditors elevated to full board members with equal, unmitigated voting rights on corporate strategy.</span></li>
-                                    <li className="flex gap-2 items-start"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-1" /> <span>Exactly half of the 10 board directors are now independent, outside directors — mathematically countering entrenched internal groupthink and legacy cronyism.</span></li>
-                                    <li className="flex gap-2 items-start"><CheckCircle2 size={14} className="text-emerald-500 shrink-0 mt-1" /> <span>Board delegates day-to-day granular execution entirely to lower executives, focusing purely on macro-strategic oversight and risk assessment.</span></li>
-                                </ul>
-                            </div>
-
-                            <div className="bg-red-600 p-6 rounded-none text-white shadow-xl">
-                                <h4 className="text-[14px] font-medium mb-4 border-b border-red-500 pb-2 tracking-wider uppercase">2026 Leadership</h4>
-                                <div className="grid grid-cols-2 gap-4">
-                                    <div>
-                                        <h5 className="font-semibold text-[15px]">Koji Sato</h5>
-                                        <div className="text-[11px] font-medium text-red-200 uppercase mb-1">JAMA Chairman</div>
-                                        <p className="text-[12px] text-red-100">Transitions outward from direct operations. Now focuses entirely on shaping macro-national policy as JAMA Chairman, coordinating with the Japanese government to enhance Japan's industrial competitiveness against China.</p>
-                                    </div>
-                                    <div>
-                                        <h5 className="font-semibold text-[15px]">Kenta Kon</h5>
-                                        <div className="text-[11px] font-medium text-red-200 uppercase mb-1">President & CEO</div>
-                                        <p className="text-[12px] text-red-100">An unorthodox, aggressive move placing the former CFO at the executive helm. Kon is explicitly deployed to meticulously lower corporate break-even volumes and engineer financial defenses in a profound war of global financial attrition.</p>
-                                    </div>
+                        <div className="space-y-4">
+                            <div className="card-hover bg-zinc-950 border border-zinc-800 p-5 rounded-none">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <Globe className="text-red-500" size={18} />
+                                    <h4 className="text-[14px] font-semibold text-white">Geographic divisions</h4>
                                 </div>
+                                <p className="text-zinc-400 text-[13px]">Establishment of powerful, dedicated regional executive authorities covering Japan, North America, Europe, Asia, and China. These divisions operate with semi-autonomy, maximizing responsiveness to localized consumer demands, differing regulatory climates, and sudden geopolitical trade shifts without waiting for Tokyo's permission.</p>
+                            </div>
+                            <div className="card-hover bg-zinc-950 border border-zinc-800 p-5 rounded-none">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <Car className="text-red-500" size={18} />
+                                    <h4 className="text-[14px] font-semibold text-white">In-house company system</h4>
+                                </div>
+                                <p className="text-zinc-400 text-[13px]">A groundbreaking shift from functional silos to product-based divisions (e.g., Lexus International, Mid-size Vehicle Company, Powertrain Unit Center). These units act as pseudo-independent agile entities, fostering rapid innovation, localized P&L accountability, and accelerated development cycles free from overarching macro-corporate bureaucracy.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </Slide>
 
-            {/* --- CHAPTER 4: STAFFING --- */}
+            {/* --- CHAPTER 3: ORGANIZING (Board Governance) --- */}
+            <Slide>
+                <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
+                    <h3 className="text-[18px] font-semibold text-white mb-8 flex items-center gap-3 tracking-tight"><Scale className="text-red-500" /> Board governance evolution</h3>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <div>
+                            <p className="text-[16px] text-zinc-400 mb-6 leading-relaxed font-normal">
+                                To ensure extreme operational agility and transparency, Toyota transitioned in June 2025 to a modern <em>company with an audit and supervisory committee</em>. This structural overhaul fundamentally altered the power dynamics within the boardroom, elevating oversight capacity while streamlining operational execution.
+                            </p>
+                            <ul className="space-y-4 text-[14px] text-zinc-300 font-normal">
+                                <li className="flex gap-3 items-start"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" /> <span>Former standard auditors have been permanently elevated to full members of the board of directors, possessing equal, unmitigated voting rights on corporate strategy.</span></li>
+                                <li className="flex gap-3 items-start"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" /> <span>Crucially, exactly half of the 10 board directors are now independent, outside directors. This mathematically counters entrenched internal groupthink and legacy cronyism.</span></li>
+                                <li className="flex gap-3 items-start"><CheckCircle2 size={16} className="text-emerald-500 shrink-0 mt-0.5" /> <span>The reorganized board deliberately delegates day-to-day granular execution tasks entirely to lower executives, allowing top-level seats to focus purely on macro-strategic oversight and risk assessment.</span></li>
+                            </ul>
+                        </div>
+                        <div className="flex flex-col gap-4">
+                            <div className="bg-zinc-950 border border-zinc-800 p-6 rounded-none">
+                                <h4 className="text-[11px] font-bold text-red-500 tracking-[0.18em] uppercase mb-4">Board composition</h4>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="text-center p-4 border border-zinc-800">
+                                        <div className="text-[32px] font-semibold text-white">5</div>
+                                        <div className="text-[12px] text-zinc-400">Internal directors</div>
+                                    </div>
+                                    <div className="text-center p-4 border border-emerald-500/30 bg-emerald-500/5">
+                                        <div className="text-[32px] font-semibold text-emerald-400">5</div>
+                                        <div className="text-[12px] text-emerald-400">Independent outsiders</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <blockquote className="border-l-4 border-red-600 pl-6 py-4 bg-zinc-950 text-[14px] text-zinc-300">
+                                The 50/50 split ensures no single faction can dominate strategic direction — a direct response to criticism that Toyota's board historically rubber-stamped executive decisions.
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </Slide>
+
+            {/* --- CHAPTER 3: ORGANIZING (Executive Restructuring) --- */}
+            <Slide>
+                <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
+                    <h3 className="text-[18px] font-semibold text-white mb-8 flex items-center gap-3 tracking-tight"><Users className="text-red-500" /> 2026 Executive restructuring</h3>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div className="bg-red-600 p-8 rounded-none text-white shadow-xl">
+                            <h5 className="font-semibold text-[20px] mb-1">Koji Sato</h5>
+                            <div className="text-[12px] font-medium text-red-200 uppercase tracking-wider mb-4">JAMA Chairman &bull; Chief Industry Officer</div>
+                            <p className="text-[15px] text-red-100 leading-relaxed">Sato transitions outward from direct operations. He now focuses entirely on shaping macro-national policy as JAMA Chairman, coordinating closely with the Japanese government to enhance Japan's overall industrial competitiveness against China. This move strategically positions Toyota at the intersection of corporate and national economic strategy.</p>
+                        </div>
+                        <div className="bg-zinc-950 border border-zinc-800 p-8 rounded-none">
+                            <h5 className="font-semibold text-[20px] text-white mb-1">Kenta Kon</h5>
+                            <div className="text-[12px] font-medium text-red-500 uppercase tracking-wider mb-4">President & CEO &bull; Former CFO</div>
+                            <p className="text-[15px] text-zinc-300 leading-relaxed">An unorthodox, aggressive move placing the former CFO at the executive helm. Kon is explicitly deployed to meticulously lower corporate break-even volumes and engineer financial defenses in a profound war of global financial attrition. His appointment signals that Toyota's immediate priority is fiscal resilience over product-led innovation.</p>
+                        </div>
+                    </div>
+                    <div className="mt-8 bg-zinc-950 border border-zinc-800 p-6 rounded-none">
+                        <h4 className="text-[14px] font-semibold text-white mb-3">Chairman: Akio Toyoda</h4>
+                        <p className="text-[14px] text-zinc-400">Retains supreme influence as founding-family chairman. Toyoda continues to set the philosophical and cultural direction of the company while delegating operational execution to Kon. His continued presence ensures continuity of the Toyota Way philosophy through the leadership transition.</p>
+                    </div>
+                </div>
+            </Slide>
+
+            {/* --- CHAPTER 4: STAFFING (Intro) --- */}
             <Slide border="border-t border-zinc-800">
                 <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
                     <SectionHeading subtitle="Chapter 4: Staffing" title="The human capital asset" />
-
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         <div>
-                            <p className="text-[15px] text-zinc-300 mb-3 leading-relaxed font-normal">
-                                Toyota fundamentally rejects the traditional Western manufacturing model of treating human labor strictly as an expendable variable cost to be minimized during economic downturns. Instead, its massive network of 380,000 global employees is systematically viewed as the company's only true appreciating asset.
+                            <p className="text-[16px] text-zinc-300 mb-4 leading-relaxed font-normal">
+                                Toyota fundamentally rejects the traditional Western manufacturing model of treating human labor strictly as an expendable variable cost to be minimized during economic downturns. Instead, its massive network of 380,000 global employees is systematically viewed as the company's only true appreciating asset. This philosophy is uncompromisingly anchored by the historic <strong>psychological contract</strong>.
                             </p>
-                            <p className="text-[14px] text-zinc-400 mb-5 leading-relaxed font-normal">
-                                Forged in the fires of a devastating 1962 labor strike, this permanent labor-management agreement guarantees long-term (often lifetime) employment for its core domestic workforce. In exchange, the company commands absolute ownership of all resulting productivity improvements and automation efficiencies. This social compact creates an intensely loyal, universally low-turnover environment that preserves highly specialized, generational institutional knowledge — preventing competitors from poaching Toyota's most experienced master craftsmen (Takumi).
+                            <p className="text-[16px] text-zinc-400 mb-6 leading-relaxed font-normal">
+                                Forged in the fires of a devastating 1962 labor strike, this permanent labor-management agreement guarantees long-term (often lifetime) employment for its core domestic workforce. In exchange, the company commands absolute, undisputed ownership of all resulting productivity improvements and automation efficiencies. This social compact creates an intensely loyal, universally low-turnover environment that preserves highly specialized, generational institutional knowledge — preventing competitors from poaching Toyota's most experienced master craftsmen (Takumi).
                             </p>
+                        </div>
+                        <div className="flex flex-col gap-4">
+                            <div className="bg-zinc-950 border border-zinc-800 p-6 rounded-none text-center">
+                                <div className="text-[36px] font-semibold text-white mb-1">380K</div>
+                                <div className="text-[11px] text-red-500 font-bold tracking-[0.18em] uppercase">Global employees</div>
+                                <div className="text-[13px] text-zinc-400 mt-2">Viewed as the only true appreciating asset</div>
+                            </div>
+                            <blockquote className="border-l-4 border-red-600 pl-6 py-4 bg-zinc-950 text-[15px] text-zinc-300">
+                                The 1962 labor strike forged a permanent social compact: lifetime employment in exchange for absolute ownership of all productivity gains.
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </Slide>
 
-                            <div className="space-y-3">
-                                <div className="card-hover bg-zinc-950 border border-zinc-800 p-4 rounded-none">
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <Users className="text-red-500" size={18} />
-                                        <h4 className="text-[14px] font-semibold text-white">Blue-collar integration</h4>
-                                    </div>
-                                    <p className="text-zinc-400 text-[12px]">Comprehensive, deeply immersive On-the-Job Training (OJT), pairing inexperienced new hires exclusively with strict veteran mentors. A relentless process of systematic job rotation cycles every worker through assembly, quality assurance, and logistics — ensuring a universally cross-trained, hyper-resilient factory workforce.</p>
-                                </div>
-                                <div className="card-hover bg-zinc-950 border border-zinc-800 p-4 rounded-none">
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <Globe className="text-red-500" size={18} />
-                                        <h4 className="text-[14px] font-semibold text-white">Global 21 Pipeline</h4>
-                                    </div>
-                                    <p className="text-zinc-400 text-[12px]">The corporate engine that cultivates global executive leadership. High-potential mid-career employees are deliberately forced into heavily demanding overseas assignments or sponsored MBA programs to acquire cross-cultural, macro-operational skills before ever being considered for senior domestic roles.</p>
-                                </div>
+            {/* --- CHAPTER 4: STAFFING (Training Pipelines) --- */}
+            <Slide>
+                <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
+                    <h3 className="text-[18px] font-semibold text-white mb-8 flex items-center gap-3 tracking-tight"><Users className="text-red-500" /> Training & development pipelines</h3>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div className="card-hover bg-zinc-950 border border-zinc-800 p-6 rounded-none">
+                            <div className="flex items-center gap-3 mb-4">
+                                <Users className="text-red-500" size={24} />
+                                <h4 className="text-[16px] font-semibold text-white">Blue-collar integration</h4>
+                            </div>
+                            <p className="text-zinc-400 text-[14px] leading-relaxed">Toyota utilizes comprehensive, deeply immersive On-the-Job Training (OJT), pairing inexperienced new hires exclusively with strict veteran mentors. A relentless process of systematic job rotation cycles every worker repeatedly through assembly, quality assurance, and physical logistics, ensuring a universally cross-trained, hyper-resilient factory workforce.</p>
+                            <div className="mt-4 pt-4 border-t border-zinc-800 text-[13px] text-zinc-500">
+                                <strong className="text-zinc-300">Key mechanism:</strong> Mandatory rotation through all production stages before specialization
                             </div>
                         </div>
-
-                        <div className="bg-black border border-zinc-800 p-6 shadow-xl relative overflow-hidden">
-                            <div className="absolute top-0 right-0 p-4 opacity-5"><FileText size={100} /></div>
-                            <h4 className="text-[15px] font-medium text-white mb-4 relative z-10 uppercase tracking-wider">Appraisal pillars</h4>
-                            <div className="grid grid-cols-1 gap-2 relative z-10">
-                                <div className="bg-zinc-950 p-3 border border-zinc-800 border-l-[3px] border-l-red-500 text-[11px]">
-                                    <strong className="text-white block font-medium mb-1">1. Physical skills (Takt)</strong>
-                                    <span className="text-zinc-400">The raw physical ability to handle complex assembly tasks strictly within the mathematically designated takt time cycle, without degrading overall product quality or safety.</span>
-                                </div>
-                                <div className="bg-zinc-950 p-3 border border-zinc-800 border-l-[3px] border-l-red-500 text-[11px]">
-                                    <strong className="text-white block font-medium mb-1">2. Quality maintenance</strong>
-                                    <span className="text-zinc-400">A track record of absolute adherence to the factory's stringent zero-defect manufacturing standards, demonstrating vigilance against letting flawed components pass down the line.</span>
-                                </div>
-                                <div className="bg-zinc-950 p-3 border border-zinc-800 border-l-[3px] border-l-red-500 text-[11px]">
-                                    <strong className="text-white block font-medium mb-1">3. Kaizen participation</strong>
-                                    <span className="text-zinc-400">Proof of active, consistently documented participation in the continuous improvement process (Kaizen), frequently suggesting and implementing small, iterative efficiency boosts.</span>
-                                </div>
-                                <div className="bg-zinc-950 p-3 border border-zinc-800 border-l-[3px] border-l-red-500 text-[11px]">
-                                    <strong className="text-white block font-medium mb-1">4. Big picture view</strong>
-                                    <span className="text-zinc-400">The cognitive ability to clearly articulate exactly how their microscopic daily assembly targets directly derive from and support the broader macro corporate objectives.</span>
-                                </div>
-                                <div className="bg-zinc-950 p-3 border border-zinc-800 border-l-[3px] border-l-red-500 text-[11px]">
-                                    <strong className="text-white block font-medium mb-1">5. Problem solving</strong>
-                                    <span className="text-zinc-400">Proven capability to independently execute comprehensive root-cause analysis (utilizing the <em>5 Whys</em> methodology) and immediately deploy corrective countermeasures.</span>
-                                </div>
+                        <div className="card-hover bg-zinc-950 border border-zinc-800 p-6 rounded-none">
+                            <div className="flex items-center gap-3 mb-4">
+                                <Globe className="text-red-500" size={24} />
+                                <h4 className="text-[16px] font-semibold text-white">GLOBAL 21 Pipeline</h4>
+                            </div>
+                            <p className="text-zinc-400 text-[14px] leading-relaxed">The corporate engine that cultivates Toyota's global executive leadership. High-potential mid-career employees are deliberately forced into heavily demanding overseas assignments or sponsored MBA programs to acquire necessary cross-cultural, macro-operational skills before ever being considered for senior domestic roles.</p>
+                            <div className="mt-4 pt-4 border-t border-zinc-800 text-[13px] text-zinc-500">
+                                <strong className="text-zinc-300">Career gate:</strong> No senior domestic role without proven international experience
                             </div>
                         </div>
                     </div>
                 </div>
             </Slide>
-            {/* --- CHAPTER 5: LEADING --- */}
+
+            {/* --- CHAPTER 4: STAFFING (Appraisal Architecture) --- */}
+            <Slide>
+                <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
+                    <h3 className="text-[18px] font-semibold text-white mb-2 flex items-center gap-3 tracking-tight"><FileText className="text-red-500" /> The architecture of appraisal</h3>
+                    <p className="text-[14px] text-zinc-400 mb-8 max-w-3xl">Annual evaluations deliberately bypass highly subjective personality traits, focusing intensely instead on 5 primary, rigorously empirical criteria (worth 10 points each):</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 stagger">
+                        <div className="card-hover bg-zinc-950 border border-zinc-800 border-l-[3px] border-l-red-500 p-5 rounded-none">
+                            <strong className="text-white block font-medium mb-2 text-[14px]">1. Physical skills (Takt)</strong>
+                            <span className="text-zinc-400 text-[13px]">The raw physical ability of the worker to handle complex assembly tasks strictly within the mathematically designated takt time cycle, doing so without degrading overall product quality or safety.</span>
+                        </div>
+                        <div className="card-hover bg-zinc-950 border border-zinc-800 border-l-[3px] border-l-red-500 p-5 rounded-none">
+                            <strong className="text-white block font-medium mb-2 text-[14px]">2. Quality maintenance</strong>
+                            <span className="text-zinc-400 text-[13px]">A track record of absolute adherence to the factory's stringent zero-defect manufacturing standards, demonstrating vigilance against letting flawed components pass down the line.</span>
+                        </div>
+                        <div className="card-hover bg-zinc-950 border border-zinc-800 border-l-[3px] border-l-red-500 p-5 rounded-none">
+                            <strong className="text-white block font-medium mb-2 text-[14px]">3. Kaizen participation</strong>
+                            <span className="text-zinc-400 text-[13px]">Proof of active, consistently documented participation in the continuous improvement process (Kaizen), frequently suggesting and implementing small, iterative efficiency boosts.</span>
+                        </div>
+                        <div className="card-hover bg-zinc-950 border border-zinc-800 border-l-[3px] border-l-red-500 p-5 rounded-none">
+                            <strong className="text-white block font-medium mb-2 text-[14px]">4. Big picture view</strong>
+                            <span className="text-zinc-400 text-[13px]">The cognitive ability of an operator to clearly articulate exactly how their microscopic daily assembly targets directly derive from and support the broader macro corporate objectives.</span>
+                        </div>
+                        <div className="card-hover bg-zinc-950 border border-zinc-800 border-l-[3px] border-l-red-500 p-5 rounded-none lg:col-span-2">
+                            <strong className="text-white block font-medium mb-2 text-[14px]">5. Problem solving</strong>
+                            <span className="text-zinc-400 text-[13px]">Proven intellectual capability to independently execute comprehensive root-cause analysis (utilizing the <em>5 Whys</em> methodology) and immediately physically deploy corrective countermeasures on the factory floor.</span>
+                        </div>
+                    </div>
+                </div>
+            </Slide>
+            {/* --- CHAPTER 5: LEADING (Intro + Systems) --- */}
             <Slide border="border-t border-red-600 bg-red-600">
-                <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-white">
-                    <div>
-                        <SectionHeading subtitle="Chapter 5: Leading" title="Facilitating horizontal alignment" light={true} />
-                        <p className="text-[14px] text-red-100 mb-5 leading-relaxed font-normal">
-                            Leadership at Toyota is a profound, structural rejection of traditional, vertical, autocratic directives common in standard manufacturing environments. Instead, it is defined entirely by meticulous facilitation, dismantling restrictive corporate silos, and intensely empowering subordinates at the <em>genba</em> (the actual place value is physically created). Leaders are coaches meant to guide continuous improvement, not drill sergeants barking orders from air-conditioned offices.
-                        </p>
-
-                        <div className="space-y-3">
-                            <div className="bg-black/20 p-4 rounded-none border border-white/10">
-                                <h4 className="text-[15px] font-medium mb-1 flex items-center gap-3"><Users size={18} /> The Obeya System</h4>
-                                <p className="text-red-100 text-[12px]">Literally translated as the <em>Big Room</em>. Cross-functional leaders and engineers from inherently conflicting departments converge daily in a highly visual, physical workspace to practice <em>genchi genbutsu</em> (going to the source). Walls are aggressively plastered with simplified A3 problem-solving documents and critical-path schedules. This radically transparent environment demolishes email chains and forces rapid, face-to-face collaborative decision-making across the entire engineering pipeline.</p>
+                <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out text-white">
+                    <SectionHeading subtitle="Chapter 5: Leading" title="Facilitating horizontal alignment" light={true} />
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <div>
+                            <p className="text-[16px] text-red-100 mb-6 leading-relaxed font-normal">
+                                Leadership at Toyota is a profound, structural rejection of traditional, vertical, autocratic directives common in standard manufacturing environments. Instead, it is defined entirely by meticulous facilitation, dismantling restrictive corporate silos, and intensely empowering subordinates at the <em>genba</em> (the actual place value is physically created). Leaders are coaches meant to guide continuous improvement, not drill sergeants barking orders from air-conditioned offices.
+                            </p>
+                        </div>
+                        <div className="space-y-4">
+                            <div className="bg-black/20 p-5 rounded-none border border-white/10">
+                                <h4 className="text-[16px] font-medium mb-2 flex items-center gap-3"><Users size={18} /> The Obeya System</h4>
+                                <p className="text-red-100 text-[13px]">Literally translated as the <em>Big Room</em>. Cross-functional leaders and engineers from inherently conflicting departments converge daily in a highly visual, physical workspace to practice <em>genchi genbutsu</em> (going to the source). Walls are aggressively plastered with simplified A3 problem-solving documents and critical-path schedules. This radically transparent environment demolishes email chains and forces rapid, face-to-face collaborative decision-making across the entire engineering pipeline.</p>
                             </div>
-                            <div className="bg-black/20 p-4 rounded-none border border-white/10">
-                                <h4 className="text-[15px] font-medium mb-1 flex items-center gap-3"><Lightbulb size={18} /> Toyota Times</h4>
-                                <p className="text-red-100 text-[12px]">Spearheaded directly by Chairman Akio Toyoda in 2020. This internal-turned-external open-media channel projects top management's unfiltered thoughts, candid failures, and strategic anxieties directly to the public and the global workforce. By bypassing traditional corporate PR buffering, it deliberately cultivates an unprecedented atmosphere of absolute transparency, systematically building bottom-up systemic trust throughout the organization.</p>
+                            <div className="bg-black/20 p-5 rounded-none border border-white/10">
+                                <h4 className="text-[16px] font-medium mb-2 flex items-center gap-3"><Lightbulb size={18} /> Toyota Times</h4>
+                                <p className="text-red-100 text-[13px]">Spearheaded directly by Chairman Akio Toyoda in 2020. This internal-turned-external open-media channel projects top management's unfiltered thoughts, candid failures, and strategic anxieties directly to the public and the global workforce. By bypassing traditional corporate PR buffering, it deliberately cultivates an unprecedented atmosphere of absolute transparency, systematically building bottom-up systemic trust throughout the organization.</p>
                             </div>
                         </div>
                     </div>
+                </div>
+            </Slide>
 
-                    <div className="bg-white text-zinc-900 p-8 rounded-none shadow-2xl">
-                        <h4 className="text-[16px] font-bold mb-3 text-red-600 uppercase tracking-tighter italic">Democratizing Innovation</h4>
-                        <p className="text-[12px] text-zinc-600 mb-4">The globally renowned <em>Toyota Creative Idea Suggestion System (TCISS)</em>, established in 1951, successfully democratized mass innovation. By granting complete creative autonomy to line workers, leadership effectively shifted its role from statically dictating processes to actively coaching employees on how to intelligently identify and permanently solve their own workspace abnormalities.</p>
-
-                        <div className="flex items-center gap-6 mb-4 border-b border-zinc-100 pb-4">
-                            <div className="text-[26px] font-bold text-zinc-900">40M+</div>
-                            <div className="text-[11px] font-medium text-zinc-500 uppercase tracking-widest leading-none">Employee Ideas<br/>Submitted</div>
+            {/* --- CHAPTER 5: LEADING (TCISS Innovation) --- */}
+            <Slide className="bg-red-600">
+                <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div className="text-white">
+                            <h3 className="text-[18px] font-semibold mb-6 flex items-center gap-3 tracking-tight"><Lightbulb size={20} /> Democratizing innovation</h3>
+                            <p className="text-[16px] text-red-100 mb-6 leading-relaxed font-normal">
+                                The globally renowned <strong>Toyota Creative Idea Suggestion System (TCISS)</strong>, established in 1951, successfully democratized mass innovation. By granting complete creative autonomy to line workers, leadership effectively shifted its role from statically dictating processes to actively coaching employees on how to intelligently identify and permanently solve their own workspace abnormalities.
+                            </p>
+                            <div className="flex items-center gap-6 bg-black/20 p-5 rounded-none border border-white/10">
+                                <div className="text-[36px] font-bold">40M+</div>
+                                <div className="text-[12px] font-medium text-red-200 uppercase tracking-widest leading-tight">Total employee ideas<br/>submitted by 2011</div>
+                            </div>
                         </div>
 
-                        <div className="grid grid-cols-2 gap-2 mb-4 text-[11px]">
-                            <div className="bg-zinc-50 p-2 border border-zinc-200"><span className="font-bold text-zinc-700">Standard prize</span><br/><span className="text-zinc-500">500 ¥</span></div>
-                            <div className="bg-zinc-50 p-2 border border-zinc-200"><span className="font-bold text-zinc-700">Outstanding</span><br/><span className="text-zinc-500">2,000 ¥</span></div>
-                            <div className="bg-zinc-50 p-2 border border-zinc-200"><span className="font-bold text-zinc-700">Excellent</span><br/><span className="text-zinc-500">5,000 ¥</span></div>
-                            <div className="bg-zinc-50 p-2 border border-zinc-200"><span className="font-bold text-zinc-700">Best award</span><br/><span className="text-zinc-500">10k–200k ¥</span></div>
-                        </div>
+                        <div className="bg-white text-zinc-900 p-8 rounded-none shadow-2xl">
+                            <h4 className="text-[14px] font-bold text-red-600 uppercase tracking-wider mb-6">Financial incentive architecture</h4>
+                            <div className="space-y-3 mb-6 text-[14px]">
+                                <div className="flex justify-between items-center border-b border-zinc-100 pb-2">
+                                    <span className="font-medium text-zinc-700">Standard prize for any suggestion</span>
+                                    <span className="bg-zinc-100 px-3 py-1 text-zinc-600 font-medium">500 ¥</span>
+                                </div>
+                                <div className="flex justify-between items-center border-b border-zinc-100 pb-2">
+                                    <span className="font-medium text-zinc-700">Outstanding prize (actionable)</span>
+                                    <span className="bg-zinc-200 px-3 py-1 text-zinc-700 font-medium">2,000 ¥</span>
+                                </div>
+                                <div className="flex justify-between items-center border-b border-zinc-100 pb-2">
+                                    <span className="font-medium text-zinc-700">Excellent prize (high impact)</span>
+                                    <span className="bg-zinc-300 px-3 py-1 text-zinc-800 font-medium">5,000 ¥</span>
+                                </div>
+                                <div className="flex justify-between items-center pb-2">
+                                    <span className="font-medium text-red-600">The best award (system-wide change)</span>
+                                    <span className="bg-red-100 px-3 py-1 text-red-600 font-medium">10k–200k ¥</span>
+                                </div>
+                            </div>
 
-                        <div className="bg-zinc-100 p-3 border-l-[3px] border-red-600">
-                            <h5 className="font-bold text-[13px] mb-1 uppercase">The Rookie Award</h5>
-                            <p className="text-zinc-600 text-[12px]">Exclusively targets 1st and 2nd-year entry employees, coercing them to successfully generate at least <strong>36 actionable efficiency suggestions annually</strong> (roughly 3 innovations per month). This radically breaks young workers from complacent habits immediately upon hiring.</p>
+                            <div className="bg-zinc-100 p-4 border-l-[3px] border-red-600">
+                                <h5 className="font-bold text-[14px] mb-1 uppercase">The Rookie Award Mandate</h5>
+                                <p className="text-zinc-600 text-[13px]">Exclusively targets 1st and 2nd-year entry employees, coercing them to successfully generate at least <strong>36 actionable efficiency suggestions annually</strong> (roughly 3 innovations per month). This radically breaks young workers from complacent habits immediately upon hiring.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </Slide>
+
+            {/* --- CHAPTER 6: CONTROLLING (Intro) --- */}
+            <Slide border="border-t border-zinc-800">
+                <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
+                    <SectionHeading subtitle="Chapter 6: Controlling" title="Algorithmic control & oversight" />
+                    <p className="text-[16px] text-zinc-400 max-w-4xl leading-relaxed font-normal">
+                        Rigorous financial controlling models reveal a volatile dual reality defining Toyota's current operational state: massive, record-breaking top-line revenue growth across global markets is being brutally offset by severe margin compression. This profit tightening is fundamentally caused by colossal capital expenditures — such as the massive $13.9B outlay for the North Carolina battery campus — compounded by soaring macro-inflation surrounding raw materials used in hybrid circuits.
+                    </p>
                 </div>
             </Slide>
 
             {/* --- CHAPTER 6: CONTROLLING (Financials) --- */}
-            <Slide border="border-t border-zinc-800">
+            <Slide>
                 <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <div>
-                        <SectionHeading subtitle="Chapter 6: Controlling" title="Financial oversight" />
-                        <p className="text-zinc-400 mb-6 leading-relaxed text-[14px] font-normal">
-                            Rigorous financial controlling models reveal a volatile dual reality defining Toyota's current operational state: massive, record-breaking top-line revenue growth across global markets is being brutally offset by severe margin compression. This profit tightening is fundamentally caused by colossal capital expenditures — such as the massive $13.9B outlay for the North Carolina battery campus — compounded by soaring macro-inflation surrounding raw materials used in hybrid circuits.
-                        </p>
+                        <h3 className="text-[18px] font-semibold text-white mb-6 flex items-center gap-3 tracking-tight"><TrendingUp className="text-red-500" /> Financial pressures & market reality</h3>
 
                         <div className="space-y-4 bg-zinc-950 p-6 rounded-none border border-zinc-800">
                             <div>
@@ -634,27 +719,48 @@ export default function App() {
                         </div>
                     </div>
 
-                    <div className="card-hover bg-zinc-950 border border-zinc-800 rounded-none p-8 flex flex-col justify-center">
-                        <h3 className="text-[16px] font-bold text-white mb-3 flex items-center gap-3 italic tracking-tighter uppercase">
-                            <ShieldCheck className="text-red-500" /> Executive Compliance
-                        </h3>
-                        <p className="text-[12px] text-zinc-400 mb-5">Following severe, multi-year crash-test certification violations discovered internally at critical subsidiaries like Hino and Daihatsu, Toyota's executive board felt regulatory heat from the Japanese government. In response, they forcibly instituted a series of draconian, no-exception compliance overhauls across the global empire.</p>
-                        <div className="relative border-l-[3px] border-red-600 pl-6 space-y-5">
-                            <div>
-                                <h5 className="text-[14px] font-bold text-white mb-1">Global CCO Mandate</h5>
-                                <p className="text-[12px] text-zinc-400 font-normal">A newly established centralized role that wields unmitigated, absolute veto authority over factory line compliance issues. The GCCO directly chairs the critical Compliance Committee alongside the Risk Management board to ensure regulatory deviations are reported directly to the CEO, entirely bypassing middle management coverups.</p>
+                    <div className="bg-zinc-950 border border-zinc-800 rounded-none p-6">
+                        <h4 className="text-[14px] font-bold text-white mb-3 uppercase tracking-wider">FY24 vs FY25 at a glance</h4>
+                        <div className="grid grid-cols-2 gap-4 text-center">
+                            <div className="p-4 border border-emerald-500/20 bg-emerald-500/5">
+                                <div className="text-[24px] font-semibold text-emerald-400">¥48T</div>
+                                <div className="text-[11px] text-zinc-400">Record revenue</div>
                             </div>
-                            <div>
-                                <h5 className="text-[14px] font-bold text-white mb-1">Regional Delegates</h5>
-                                <p className="text-[12px] text-zinc-400 font-normal">Strategically appointed across heavily regulated territories like North America and the EU to ensure specific, localized cultural management nuances do not obscure or contradict high-level Japanese corporate governance mandates.</p>
+                            <div className="p-4 border border-red-500/20 bg-red-500/5">
+                                <div className="text-[24px] font-semibold text-red-400">-1.9pp</div>
+                                <div className="text-[11px] text-zinc-400">Margin erosion</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </Slide>
 
+            {/* --- CHAPTER 6: CONTROLLING (Compliance) --- */}
+            <Slide>
+                <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
+                    <h3 className="text-[18px] font-semibold text-white mb-2 flex items-center gap-3 tracking-tight">
+                        <ShieldCheck className="text-red-500" /> Executive compliance architecture
+                    </h3>
+                    <p className="text-[15px] text-zinc-400 mb-8 max-w-4xl leading-relaxed font-normal">
+                        Following severe, multi-year crash-test certification violations discovered internally at critical subsidiaries like Hino and Daihatsu, Toyota's executive board felt regulatory heat from the Japanese government. In response, they forcibly instituted a series of draconian, no-exception compliance overhauls across the global empire.
+                    </p>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div className="bg-zinc-950 border border-zinc-800 p-6 rounded-none relative">
+                            <div className="absolute top-0 left-0 w-full h-[3px] bg-red-600"></div>
+                            <h5 className="text-[16px] font-bold text-white mb-3 mt-2">Global Chief Compliance Officer (GCCO)</h5>
+                            <p className="text-[14px] text-zinc-400 font-normal leading-relaxed">A newly established centralized role that wields unmitigated, absolute veto authority over factory line compliance issues. The GCCO directly chairs the critical Compliance Committee alongside the Risk Management board to ensure regulatory deviations are reported directly to the CEO, entirely bypassing middle management coverups.</p>
+                        </div>
+                        <div className="bg-zinc-950 border border-zinc-800 p-6 rounded-none relative">
+                            <div className="absolute top-0 left-0 w-full h-[3px] bg-zinc-600"></div>
+                            <h5 className="text-[16px] font-bold text-white mb-3 mt-2">Regional CCO Delegates</h5>
+                            <p className="text-[14px] text-zinc-400 font-normal leading-relaxed">Strategically appointed across heavily regulated territories like North America and the EU to ensure specific, localized cultural management nuances do not obscure or contradict high-level Japanese corporate governance mandates.</p>
+                        </div>
+                    </div>
+                </div>
+            </Slide>
+
             {/* --- CHAPTER 6: CONTROLLING (Supply Chain) --- */}
-            <Slide border="border-t border-zinc-800">
+            <Slide>
                 <div className="animate-on-scroll opacity-0 translate-y-12 transition-all duration-1000 ease-out">
                     <h3 className="text-[18px] font-bold text-white mb-8 flex items-center gap-3 uppercase italic tracking-tighter">
                         <Globe className="text-blue-500" /> Supply Control
