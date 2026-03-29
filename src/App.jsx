@@ -8,6 +8,14 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
+const SectionHeading = ({ subtitle, title }) => (
+    <div className="mb-16 md:mb-24">
+        <p className="text-red-500 font-semibold tracking-[0.18em] text-[11px] uppercase mb-5 opacity-80">{subtitle}</p>
+        <h2 className="text-[36px] md:text-[48px] font-semibold text-white leading-[1.08] tracking-tight">{title}</h2>
+        <div className="h-[2px] w-14 bg-red-600 mt-6 rounded-none opacity-70"></div>
+    </div>
+);
+
 const Slide = ({ children, className = "" }) => (
     <section className={`snap-section shrink-0 h-screen w-full flex flex-col justify-center px-4 md:px-12 overflow-hidden relative ${className}`}>
         <div className="max-w-7xl mx-auto w-full max-h-full flex flex-col justify-center py-12">
